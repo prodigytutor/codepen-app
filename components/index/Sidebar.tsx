@@ -5,7 +5,14 @@ export default function Header() {
   return (
     <div className='sidebar'>
       {/* next/image reads public folder simply as '/' - don't need exact file path */}
-      <Image width={2500} height={454} src={`/codepen-logo.svg`} alt={`side-bar`} className={`sidebar-icon`}/>
+      <Image
+        width={2500} 
+        height={454} 
+        src={`/codepen-logo.svg`} 
+        alt={`side-bar`} 
+        className={`sidebar-icon`}
+      />
+      <span className='sidebar-subtitle'>TRY OUR ONLINE EDITOR</span>
       <a className='sidebar-href' href="">
         <span className='sidebar-span'>Start Coding</span>
       </a>
