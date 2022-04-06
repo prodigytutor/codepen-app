@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function Header() {
+export default function Sidebar() {
   return (
     <div className='sidebar'>
       {/* next/image reads public folder simply as '/' - don't need exact file path */}

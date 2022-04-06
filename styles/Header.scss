@@ -1,0 +1,118 @@
+@media (min-width: 830px) {
+
+
+    .header {
+        margin-left: 220px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .mobile-icons {
+            display: none;
+        }
+    
+        .search-form {
+            display: flex;
+            background-color: #252830;
+            margin: 1.5vh 1vw;
+            padding: 1.5vh 1vw;
+            border-radius: 5px;
+            width: 65vw;
+        }
+    
+        input {
+            background-color: #252830;
+            border: none;
+            font-size: large;
+            font-weight: bold;
+            color: #868892;
+            padding-left: 1vw;
+        }
+    
+        .btn {
+            display: flex;
+            background-color: #252830;
+            margin-left: 4px;
+            margin-right: 13px;
+            padding: 1.5vh 1vw;
+            border-radius: 5px;
+            white-space: nowrap;
+            text-decoration: none;
+            width: 65px;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .sign-up {
+            background-color: #47CF73;
+            color: black !important;
+        }
+    
+        .sign-in {
+            color: white !important;
+        }
+    } 
+}
+
+@media (max-width: 829px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .mobile-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-left: 5px;
+
+            button {
+                display: flex;
+            }
+
+            .mobile-icon {
+                padding: 6px;
+            }
+        }
+
+        .search-form {
+            display: flex;
+            background-color: #252830;
+            margin: 0.75vh 1vw;
+            padding: 0.75vh 1vw;
+            border-radius: 5px;
+            width: 65vw;
+        }
+    
+        input {
+            background-color: #252830;
+            border: none;
+            font-size: large;
+            font-weight: bold;
+            color: #868892;
+            padding-left: 1vw;
+        }
+    
+        .btn {
+            display: flex;
+            background-color: #252830;
+            margin: 0.75vh 1vw;
+            padding: 0.75vh 1vw;
+            border-radius: 5px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+    
+        .sign-up {
+            background-color: #47CF73;
+            color: black !important;
+        }
+    
+        .sign-in {
+            color: white !important;
+        }
+    }
+}
