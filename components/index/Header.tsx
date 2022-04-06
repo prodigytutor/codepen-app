@@ -1,7 +1,8 @@
+import { NextPage } from 'next'
 import React from 'react'
 import Image from 'next/image'
 
-const Header = () => {
+const Header: NextPage = () => {
   return (
     <>
     <div className='header'>
@@ -24,7 +25,7 @@ const Header = () => {
              />
           </button>
         </div>
-        </div>
+        </div>  
         <form className='search-form' action="">
           <Image 
             height={25}
@@ -36,7 +37,7 @@ const Header = () => {
           <input type="text" placeholder='Search CodePen...' />
         </form>
         <a className='btn sign-up' href="">Sign Up</a>
-        <a className='btn sign-in' href="">Sign In</a>
+        <a className='btn log-in' href="">Sign In</a>
     </div>
     </>
   )
