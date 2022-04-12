@@ -8,5 +8,3 @@ const codepen: NextPage = () => {
 }
 
 export default codepen
-
-
