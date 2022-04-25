@@ -1,10 +1,8 @@
-import React from 'react'
-import { NextPage } from 'next'
-import Editor from '../components/codepen/Editor.js'
-import { cssDonut, jsDonut, htmlDonut } from '../components/codepen/donut-codepen.js'
+import React, { useState, useEffect } from 'react'
+import Editor from '../components/Editor.js';
+import { cssDonut, jsDonut, htmlDonut } from '../components/donut-codepen.js';
 
-
-const codepen: NextPage = () => {
+export default function CodePen() {
 
     const [html, setHtml] = useState(htmlDonut)
     const [css, setCss] = useState(cssDonut)
@@ -64,5 +62,3 @@ const codepen: NextPage = () => {
     </>
   )
 }
-
-export default codepen
