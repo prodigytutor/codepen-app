@@ -30,22 +30,22 @@ const Codepen: NextPage = () => {
             {/* Codepen */}
             <div className='pane top-pane'>
                 <Editor 
-                    // language='xml'
-                    // displayName='HTML'
-                    // value={html}
-                    // onChange={setHtml}
+                    language='xml'
+                    displayName='HTML'
+                    value={html}
+                    onChange={setHtml}
                 />
                 <Editor 
-                    // language='javascript'
-                    // displayName='JS'
-                    // value={js}
-                    // onChange={setJs}
+                    language='javascript'
+                    displayName='JS'
+                    value={js}
+                    onChange={setJs}
                 />
                 <Editor 
-                    // language='css'
-                    // displayName='CSS'
-                    // value={css}
-                    // onChange={setCss}
+                    language='css'
+                    displayName='CSS'
+                    value={css}
+                    onChange={setCss}
                 />
             </div>
             <div className='pane'>
