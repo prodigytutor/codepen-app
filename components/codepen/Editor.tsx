@@ -12,8 +12,8 @@ import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
 interface EditorProps {
   language: string;
   displayName: string;
-  value: object;
-  onChange: object;
+  value: any;
+  onChange: any;
 }
 
 interface HandleChangeProps {
@@ -22,11 +22,11 @@ interface HandleChangeProps {
   value: string;
 }
 
-const Editor: FunctionComponent = ({language, displayName, value, onChange}: EditorProps) => {
+const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, onChange}) => {
 
   const [open, setOpen] = useState(true)
 
-  function handleChange(editor, data, value) {
+  function handleChange({editor, data, value}: HandleChangeProps) {
     onChange(value)
   }
 
