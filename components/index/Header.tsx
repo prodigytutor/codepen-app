@@ -1,8 +1,7 @@
-import { NextPage } from 'next'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 
-const Header: NextPage = () => {
+const Header: FunctionComponent = () => {
   return (
     <>
     <div className='header'>

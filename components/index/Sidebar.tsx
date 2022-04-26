@@ -1,9 +1,8 @@
-import { NextPage } from 'next'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Sidebar: NextPage = () => {
+const Sidebar: FunctionComponent = () => {
   return (
     <div className='sidebar'>
       {/* next/image reads public folder simply as '/' - don't need exact file path */}
@@ -24,4 +23,3 @@ const Sidebar: NextPage = () => {
 }
 
 export default Sidebar
-
