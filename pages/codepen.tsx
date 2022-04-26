@@ -57,7 +57,6 @@ const Codepen: NextPage = () => {
                     width='100%'
                     height='100%'
                     className='iframe-codepen-page'
-
                 />
             </div>
         </div>
