@@ -4,6 +4,8 @@ import Editor from '../components/codepen/Editor';
 import jsIcon from '../public/js-icon.svg';
 import htmlIcon from '../public/html-icon.svg';
 import cssIcon from '../public/css-icon.svg';
+import Split from 'react-split'
+
 // import axios from 'axios'
 
 const Codepen: NextPage = () => {
@@ -42,43 +44,45 @@ const Codepen: NextPage = () => {
 
   return (
     <>
-      <div>
-            {/* Codepen */}
-            <div className='pane'>
-                <Editor 
-                    language='xml'
-                    displayName='HTML'
-                    value={html}
-                    onChange={setHtml}
-                    svg={htmlIcon}
-                />
-                <Editor 
-                    language='javascript'
-                    displayName='JS'
-                    value={js}
-                    onChange={setJs}
-                    svg={jsIcon}
-                />
-                <Editor 
-                    language='css'
-                    displayName='CSS'
-                    value={css}
-                    onChange={setCss}
-                    svg={cssIcon}
-                />
-            </div>
-            <div className='iframe'>
-                <iframe
-                    srcDoc={srcDoc}
-                    title='output'
-                    sandbox='allow-scripts'
-                    frameBorder='0'
-                    width='100%'
-                    height='100%'
-                    className='iframe-codepen-page'
-                />
-            </div>
-        </div>
+
+           
+              <Split direction='vertical' style={{ height: '100vh'}}>
+                <div className='editors'>
+                    <Editor
+                        language='xml'
+                        displayName='HTML'
+                        value={html}
+                        onChange={setHtml}
+                        svg={htmlIcon}
+                    />
+                    <Editor
+                        language='javascript'
+                        displayName='JS'
+                        value={js}
+                        onChange={setJs}
+                        svg={jsIcon}
+                    />
+                    <Editor
+                        language='css'
+                        displayName='CSS'
+                        value={css}
+                        onChange={setCss}
+                        svg={cssIcon}
+                    />
+                </div>
+                <div className='iframe'>
+                    <iframe
+                        srcDoc={srcDoc}
+                        title='output'
+                        sandbox='allow-scripts'
+                        frameBorder='0'
+                        width='100%'
+                        height='100%'
+                        className='iframe-codepen-page'
+                    />
+                </div>
+              </Split>
+
     </>
   )
 }

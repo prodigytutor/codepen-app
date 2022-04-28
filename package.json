@@ -20,7 +20,11 @@
     "next": "12.1.4",
     "react": "18.0.0",
     "react-codemirror2": "^7.2.1",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-resize-panel": "^0.3.5",
+    "react-split": "^2.0.14",
+    "react-split-grid": "^1.0.4",
+    "react-split-pane": "^2.0.3"
   },
   "devDependencies": {
     "@types/codemirror": "^5.60.5",

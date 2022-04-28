@@ -2,7 +2,6 @@ import React, { FunctionComponent } from 'react'
 import dynamic from 'next/dynamic'
 import CodeMirror from '@uiw/react-codemirror'
 import Image from 'next/image'
-import {EditorView} from "@codemirror/view"
 
 interface EditorProps { 
   language: string;
@@ -33,27 +32,31 @@ const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, o
   return (
     <>
     <div className='editor-container'>
-        <div className='editor-header'>
-            <div className='title-svg-container'>
-              <div>
-                <Image src={svg} height={20} width={20}/>
+        
+          <div className='editor-header'>
+              <div className='title-svg-container'>
+                <div>
+                  <Image src={svg} height={20} width={20}/>
+                </div>
+                <div>{displayName}</div>
               </div>
-              <div>{displayName}</div>
-            </div>
-        </div>
-      <div className='codemirror'>
-        {CodeMirrorRefresh && <CodeMirror
-              onChange={handleChange}
-              value={value}
-              options={{
-                  lineWrapping: true,
-                  lint: true,
-                  lineNumbers: true,
-                  mode: language,
-                  theme: 'material',
-              }}
-          />}
-      </div>
+          </div>
+          <div className='codemirror'>
+          
+              {CodeMirrorRefresh && <CodeMirror
+                    onChange={handleChange}
+                    value={value}
+                    options={{
+                        lineWrapping: true,
+                        lint: true,
+                        lineNumbers: true,
+                        mode: language,
+                        theme: 'material',
+                    }}
+                />}
+          </div>
+      
+      
     </div>
     </>
   )
