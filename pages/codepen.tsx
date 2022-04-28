@@ -46,7 +46,7 @@ const Codepen: NextPage = () => {
     <>
     <Split direction='vertical' style={{ height: '100vh'}}>
 
-      <div>
+      <div className='editors-wrapper'>
         
           <Split className='editors' direction='horizontal'>
             <div>

@@ -2,10 +2,15 @@ html {
     height: auto;
 }
 
-.editors {
-    display: flex;
-    height: 100%;
+
+.editors-wrapper {
+    min-height: 40vh !important;
+    .editors {
+        display: flex;
+        height: 100%;
+    }
 }
+
 
 .iframe {
 
