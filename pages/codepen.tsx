@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next';
 import Editor from '../components/codepen/Editor';
-import { htmlGameboy, cssGameboy, jsGameboy } from '../components/codepen/gameboy-code';
+// import { htmlGameboy, cssGameboy, jsGameboy } from '../components/codepen/gameboy-code';
 
 const Codepen: NextPage = () => {
 
-  const [html, setHtml] = useState(htmlGameboy)
-  const [css, setCss] = useState(cssGameboy)
-  const [js, setJs] = useState(jsGameboy)
+  const [html, setHtml] = useState('')
+  const [css, setCss] = useState('')
+  const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
 
   useEffect(() => {
@@ -23,6 +23,7 @@ const Codepen: NextPage = () => {
     return () => clearTimeout(timeout)
     
   }, [html, css, js])
+
 
   return (
     <>

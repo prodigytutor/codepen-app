@@ -1,12 +1,10 @@
-import React, { FunctionComponent, useState } from 'react'
+import React, { FunctionComponent } from 'react'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
 import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
-import { Controlled } from 'react-codemirror2'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
+import CodeMirror from '@uiw/react-codemirror';
 
 
 interface EditorProps {
@@ -16,36 +14,27 @@ interface EditorProps {
   onChange: any;
 }
 
-interface HandleChangeProps {
-  editor: string;
-  data: string;
-  value: string;
-}
+
 
 const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, onChange}) => {
 
-  const [open, setOpen] = useState(true)
 
-  function handleChange({editor, data, value}: HandleChangeProps) {
-    onChange(value)
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(event)
+    console.log('onchange event.target', event)
   }
 
 
   return (
     <>
-    <div className={`editor-container ${open ? '' : 'collapsed'}`}>
+    <div>
         <div className='editor-title'>
             {displayName}
-            <button
-                type='button'
-                className='expand-collapse-button'
-                onClick={() => setOpen(prevOpen => !prevOpen)}    
-            >
-                <FontAwesomeIcon icon={open ? faCompressAlt : faExpandAlt} />
-            </button>
+            
         </div>
-        <Controlled
-            onBeforeChange={handleChange}
+        <CodeMirror
+            onChange={handleChange}
             value={value}
             options={{
                 lineWrapping: true,

@@ -1,4 +1,11 @@
 import React, { useState } from 'react'
+if (typeof navigator !== 'undefined') {
+    require('codemirror/lib/codemirror.css');
+    require('codemirror/theme/material.css');
+    require('codemirror/mode/xml/xml');
+    require('codemirror/mode/javascript/javascript');
+    require('codemirror/mode/css/css')
+  }
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
 import 'codemirror/mode/xml/xml'
@@ -7,7 +14,6 @@ import 'codemirror/mode/css/css'
 import { Controlled } from 'react-codemirror2'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons'
-
 
 
 export default function Editor(props) {
