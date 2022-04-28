@@ -44,7 +44,7 @@ const Codepen: NextPage = () => {
     <>
       <div>
             {/* Codepen */}
-            <div className='pane top-pane'>
+            <div className='pane'>
                 <Editor 
                     language='xml'
                     displayName='HTML'
@@ -67,7 +67,7 @@ const Codepen: NextPage = () => {
                     svg={cssIcon}
                 />
             </div>
-            <div className='pane'>
+            <div className='iframe'>
                 <iframe
                     srcDoc={srcDoc}
                     title='output'
