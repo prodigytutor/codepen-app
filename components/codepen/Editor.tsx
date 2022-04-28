@@ -1,16 +1,18 @@
 import React, { FunctionComponent } from 'react'
 import dynamic from 'next/dynamic'
 import CodeMirror from '@uiw/react-codemirror'
+import Image from 'next/image'
+import {EditorView} from "@codemirror/view"
 
 interface EditorProps { 
   language: string;
   displayName: string;
   value: any;
   onChange: any;
+  svg: any;
 }
 
-const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, onChange}) => {
-
+const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, onChange, svg}) => {
 
   // dynamic imports for refreshing page with Next.js
   const CodeMirrorRefresh = dynamic(() => {
@@ -27,23 +29,31 @@ const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, o
     console.log('handleChange')
   }
 
+
   return (
     <>
-    <div>
-        <div className='editor-title'>
-            {displayName}
+    <div className='editor-container'>
+        <div className='editor-header'>
+            <div className='title-svg-container'>
+              <div>
+                <Image src={svg} height={20} width={20}/>
+              </div>
+              <div>{displayName}</div>
+            </div>
         </div>
-      {CodeMirrorRefresh && <CodeMirror
-            onChange={handleChange}
-            value={value}
-            options={{
-                lineWrapping: true,
-                lint: true,
-                lineNumbers: true,
-                mode: language,
-                theme: 'material'
-            }} 
-        />}
+      <div className='codemirror'>
+        {CodeMirrorRefresh && <CodeMirror
+              onChange={handleChange}
+              value={value}
+              options={{
+                  lineWrapping: true,
+                  lint: true,
+                  lineNumbers: true,
+                  mode: language,
+                  theme: 'material',
+              }}
+          />}
+      </div>
     </div>
     </>
   )

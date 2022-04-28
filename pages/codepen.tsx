@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next';
 import Editor from '../components/codepen/Editor';
-// import { htmlGameboy, cssGameboy, jsGameboy } from '../components/codepen/gameboy-code';
+import jsIcon from '../public/js-icon.svg';
+import htmlIcon from '../public/html-icon.svg';
+import cssIcon from '../public/css-icon.svg';
+// import axios from 'axios'
 
 const Codepen: NextPage = () => {
 
@@ -10,6 +13,18 @@ const Codepen: NextPage = () => {
   const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
 
+
+  // GET requests for html and js from a codepen id
+  // axios.get('https://codepen.io/chriscoyier/pen/gHnGD.html')
+  // .then(response => {
+  //   console.log('getPens html', response)
+  // })
+
+  // axios.get('https://codepen.io/chriscoyier/pen/gHnGD.js')
+  // .then(response => {
+  //   console.log('getPens js', response)
+  // })
+  
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(`
@@ -25,7 +40,6 @@ const Codepen: NextPage = () => {
     
   }, [html, css, js])
 
-
   return (
     <>
       <div>
@@ -36,18 +50,21 @@ const Codepen: NextPage = () => {
                     displayName='HTML'
                     value={html}
                     onChange={setHtml}
+                    svg={htmlIcon}
                 />
                 <Editor 
                     language='javascript'
                     displayName='JS'
                     value={js}
                     onChange={setJs}
+                    svg={jsIcon}
                 />
                 <Editor 
                     language='css'
                     displayName='CSS'
                     value={css}
                     onChange={setCss}
+                    svg={cssIcon}
                 />
             </div>
             <div className='pane'>
