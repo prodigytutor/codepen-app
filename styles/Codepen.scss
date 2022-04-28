@@ -4,20 +4,14 @@ html {
 
 .editors {
     display: flex;
-    .editor {
-        display: flex;
-        flex-grow: 1;
-    }
 }
 
 .iframe {
-
 
     iframe {
         background-color: white;
         border: 0;
         width: 100%;
-
         left: 0;
     }
 }

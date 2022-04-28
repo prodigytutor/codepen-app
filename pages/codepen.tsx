@@ -44,57 +44,55 @@ const Codepen: NextPage = () => {
 
   return (
     <>
+    <Split direction='vertical' style={{ height: '100vh'}}>
 
-           
-              <Split direction='vertical' style={{ height: '100vh'}}>
-                
-                    
-                      
-                        <div className='editors'>
-                          <div className='editor'>
-                            <Editor
-                                language='xml'
-                                displayName='HTML'
-                                value={html}
-                                onChange={setHtml}
-                                svg={htmlIcon}
-                            />
-                          </div>
-                          <div className='editor'>
-                            <Editor
-                                language='javascript'
-                                displayName='JS'
-                                value={js}
-                                onChange={setJs}
-                                svg={jsIcon}
-                            />
-                          </div>
-                          <div className='editor'>
-                            <Editor
-                                language='css'
-                                displayName='CSS'
-                                value={css}
-                                onChange={setCss}
-                                svg={cssIcon}
-                            />
-                          </div>
-                        </div>
-                 
-                 
-              
-                <div className='iframe'>
-                    <iframe
-                        srcDoc={srcDoc}
-                        title='output'
-                        sandbox='allow-scripts'
-                        frameBorder='0'
-                        width='100%'
-                        height='100%'
-                        className='iframe-codepen-page'
-                    />
-                </div>
-              </Split>
+      <div>
+        
+          <Split className='editors' direction='horizontal'>
+            <div>
+              <Editor
+                  language='xml'
+                  displayName='HTML'
+                  value={html}
+                  onChange={setHtml}
+                  svg={htmlIcon}
+              />
+            </div>
+            <div>
+              <Editor
+                  language='javascript'
+                  displayName='JS'
+                  value={js}
+                  onChange={setJs}
+                  svg={jsIcon}
+              />
+            </div>
+            <div>
+              <Editor
+                  language='css'
+                  displayName='CSS'
+                  value={css}
+                  onChange={setCss}
+                  svg={cssIcon}
+              />
+            </div>
+          </Split>
+      
+      </div>
 
+      <div className='iframe'>
+          <iframe
+              srcDoc={srcDoc}
+              title='output'
+              sandbox='allow-scripts'
+              frameBorder='0'
+              width='100%'
+              height='100%'
+              className='iframe-codepen-page'
+          />
+      </div>
+
+    </Split>
     </>
   )
 }
