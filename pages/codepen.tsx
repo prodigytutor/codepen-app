@@ -19,6 +19,7 @@ const Codepen: NextPage = () => {
           <script>${js}</script>
       </html>
       `)
+      console.log('useEffect codepen.tsx')
     }, 250)
     return () => clearTimeout(timeout)
     
