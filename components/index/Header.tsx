@@ -12,7 +12,7 @@ const Header: FunctionComponent = () => {
             width={50}
             alt={`search`}
             src={`/codepen-icon.svg`}
-            className='header-icons'
+            className='header-icon1'
            />
         </a>
         <div className='mobile-icon'>
