@@ -12,6 +12,7 @@ const Header: FunctionComponent = () => {
             width={50}
             alt={`search`}
             src={`/codepen-icon.svg`}
+            className='header-icons'
            />
         </a>
         <div className='mobile-icon'>
@@ -21,6 +22,7 @@ const Header: FunctionComponent = () => {
               width={40}
               alt={`search`}
               src={`/menu.svg`}
+              className='header-icons'
              />
           </button>
         </div>
@@ -31,7 +33,8 @@ const Header: FunctionComponent = () => {
             width={25}
             alt={`search`}
             src={`/search.svg`}
-            className={`search-icon`}
+            className='header-icons'
+            
             />
           <input type="text" placeholder='Search CodePen...' />
         </form>

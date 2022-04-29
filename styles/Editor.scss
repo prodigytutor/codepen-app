@@ -1,13 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
 .editor-container {
     flex-grow: 1;
     flex-basis: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
+    border-top: solid 0.3px #34363e;
+    border-right: solid 0.3px #34363e;
+    
 
     .editor-header {
-        width: 7rem;
+        width: fit-content;
         background-color: #1d1e22;
+        border-top: solid 2px #34363e;
+        border-left: solid .3px #34363e;
+        border-bottom: solid 0.3px #1a1717;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: #AAAEBC;
+        padding-right: 1rem;
 
         .title-svg-container {
             display: flex;
@@ -22,7 +35,10 @@
     }
     .codemirror {
         height: 100%;
+        border-left: solid 0.3px #34363e;
+        border-bottom: solid 0.3px #34363e;
     }
+    
     .cm-activeLine {
         background-color: #1d1e22 !important;
     }

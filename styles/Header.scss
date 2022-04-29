@@ -11,6 +11,10 @@
         .mobile-icons {
             display: none;
         }
+
+        .mobile-icon {
+            filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
+        }
     
         .search-form {
             display: flex;
@@ -19,6 +23,10 @@
             padding: 1.5vh 1vw;
             border-radius: 5px;
             width: 65vw;
+        }
+
+        .header-icons {
+            filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
         }
     
         input {
@@ -63,12 +71,17 @@
         align-items: center;
         justify-content: space-between;
 
+        .header-icons {
+            filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
+        }
+
         .mobile-icons {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             padding-left: 5px;
+            filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
 
             button {
                 display: flex;
@@ -76,6 +89,7 @@
 
             .mobile-icon {
                 padding: 6px;
+                filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
             }
         }
 

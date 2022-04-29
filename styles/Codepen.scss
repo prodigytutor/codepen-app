@@ -1,16 +1,31 @@
-html {
-    height: auto;
-}
-
-
 .editors-wrapper {
     min-height: 40vh !important;
     .editors {
         display: flex;
         height: 100%;
     }
+
+    .left-divider-wrapper {
+        display: flex;
+        .left-divider {
+            height: calc(100% - 1px);
+            width: 18px;
+            background-color: black;
+            display: flex !important;
+            border-top: solid 0.3px #34363e;
+            border-bottom: solid 0.3px #34363e;
+        }
+    }
 }
 
+.gutter-horizontal {
+    width: 18px !important;
+    border-top: solid 0.3px #34363e;
+}
+.gutter-vertical {
+    height: 18px !important;
+    border-top: 0.3px solid #34363e;
+}
 
 .iframe {
 
@@ -21,7 +36,3 @@ html {
         left: 0;
     }
 }
-
-
-
-

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+.editor-header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: .5rem .5rem .8rem .5rem;
+
+    .icon-wrapper {
+        padding-right: .3rem !important;
+    }
+    .editor-icon1 {
+       
+        filter:
+            invert(95%) 
+            sepia(100%) 
+            saturate(0%) 
+            hue-rotate(168deg) 
+            brightness(118%) 
+            contrast(100%);
+    }
+    
+    .user-name {
+        color: white;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+    }
+
+    .editor-header-input {
+        background-color: #060606;
+        border: none;
+        font-size: 20px;
+        color: white;
+        width: 5rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        &:focus {
+            outline: none;
+            color: white;
+        }
+        &::placeholder {
+            color: white;
+        }
+    }
+    .editor-icon2 {
+        filter: 
+            invert(95%) 
+            sepia(100%) 
+            saturate(0%) 
+            hue-rotate(168deg) 
+            brightness(118%) 
+            contrast(100%);
+    }
+}

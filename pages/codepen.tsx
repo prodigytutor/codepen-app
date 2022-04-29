@@ -5,6 +5,9 @@ import jsIcon from '../public/js-icon.svg';
 import htmlIcon from '../public/html-icon.svg';
 import cssIcon from '../public/css-icon.svg';
 import Split from 'react-split'
+import EditorHeader from '../components/codepen/EditorHeader';
+import headerIcon from '../public/codepen-icon-small.svg';
+import editIcon from '../public/edit-icon.svg'
 
 // import axios from 'axios'
 
@@ -44,36 +47,43 @@ const Codepen: NextPage = () => {
 
   return (
     <>
-    <Split direction='vertical' style={{ height: '100vh'}}>
-
+    <EditorHeader 
+      codepenIcon={headerIcon}
+      editIcon={editIcon}
+      />
+    <Split className='split' direction='vertical' style={{ height: '100vh'}}>
+   
       <div className='editors-wrapper'>
+
+      
         
           <Split className='editors' direction='horizontal'>
+            <div className='left-divider-wrapper'>
+            <div className='left-divider'/>
+                <Editor
+                    language='xml'
+                    displayName='HTML'
+                    value={html}
+                    onChange={setHtml}
+                    svg={htmlIcon}
+                />
+              </div>
             <div>
-              <Editor
-                  language='xml'
-                  displayName='HTML'
-                  value={html}
-                  onChange={setHtml}
-                  svg={htmlIcon}
-              />
+                <Editor
+                    language='css'
+                    displayName='CSS'
+                    value={css}
+                    onChange={setCss}
+                    svg={cssIcon}
+                  />
             </div>
             <div>
-              <Editor
+            <Editor
                   language='javascript'
                   displayName='JS'
                   value={js}
                   onChange={setJs}
                   svg={jsIcon}
-              />
-            </div>
-            <div>
-              <Editor
-                  language='css'
-                  displayName='CSS'
-                  value={css}
-                  onChange={setCss}
-                  svg={cssIcon}
               />
             </div>
           </Split>
