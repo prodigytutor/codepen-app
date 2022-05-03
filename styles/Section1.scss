@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 .section1-container {
-    padding-left: 3rem;
+    padding-left: 150px;
     padding-top: 3vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
     .container1 {
         width: 38vw;
         .section1-icon {
@@ -23,6 +24,7 @@
             width: 27vw;
         }
     }
+
 
 }
 
