@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 .section1-container {
-    padding-left: 150px;
+    padding-left: 250px;
     padding-top: 3vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: auto;
     // background-image: url('../public/section1-background.svg');
     background-repeat: no-repeat;
@@ -40,6 +40,7 @@
                 background: #1d1e22;
                 box-shadow: 0 4px 30px rgb(0 0 0 / 50%);
                 border-radius: 6px;
+                color: white;
                 .code-example-header {
                     display: flex;
                     flex-direction: row;
@@ -58,6 +59,9 @@
                             padding: .5rem;
                         }
                     }
+                    .img-wrapper {
+                        padding: .5rem;
+                    }
 
                     .example-icon {
                         filter: 
@@ -69,7 +73,33 @@
                             contrast(94%);
                     }
                 }
-                
+                .code-section {
+                    padding: .5rem;
+                }
+                .brown {
+                    color: #A88038;
+                }
+                .yellow {
+                    color: #E1CA72;
+                }
+                .green {
+                    color: #74B087;
+                }
+                .purple {
+                    color: #9f8198;
+                }
+                .orange {
+                    color: #de7300;
+                }
+                .blue {
+                    color: #7a99ad;
+                }
+                .white {
+                    color: white;
+                }
+                .transparent {
+                    color: transparent;
+                }
             }
         }
     }

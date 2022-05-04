@@ -1,6 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import Section1Html from './Section1Html'
+import Section1Js from './Section1Js'
+import Section1Css from './Section1Css'
 
 const Section1: FunctionComponent = () => {
   return (
@@ -20,8 +22,8 @@ const Section1: FunctionComponent = () => {
         <div className='container2'>
             <div className='gray-square'>
               <Section1Html />
-              {/* <Section1Html />
-              <Section1Html /> */}
+              <Section1Css />
+              <Section1Js />
             </div>
         </div>
     </div>

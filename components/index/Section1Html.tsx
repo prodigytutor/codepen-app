@@ -1,8 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 
-
-
 const Section1Html: FunctionComponent = () => {
   return (
     <>
@@ -20,14 +18,31 @@ const Section1Html: FunctionComponent = () => {
                     </div>
                     <span>HTML</span>
                 </div>
-                <Image
-                    src={`/down-arrow.svg`}
-                    alt='settings'
-                    width={20}
-                    height={20}
-                    className='example-icon'
+                <div className='img-wrapper'>
+                    <Image
+                        src={`/down-arrow.svg`}
+                        alt='settings'
+                        width={16}
+                        height={16}
+                        className='example-icon'
                     />
+                </div>
             </div>
+            <code className='code-section'>
+                <span className='brown'>
+                    {`<div `}
+                </span>
+                <span className='yellow'>
+                    {`class`}
+                </span>
+                =
+                <span className='green'>
+                    {`"rect"`}
+                </span>
+                <span className='brown'>
+                    {`></div>`}
+                </span>
+            </code>
         </div>
     </>
   )
