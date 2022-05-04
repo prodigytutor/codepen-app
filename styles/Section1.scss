@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 .section1-container {
-    padding-left: 250px;
+    padding-left: 240px;
     padding-top: 3vh;
     display: flex;
     flex-direction: row;
@@ -11,32 +11,42 @@
     background-repeat: no-repeat;
     background-position: right top;
     .container1 {
-        width: 38vw;
+        width: 40vw;
         .section1-icon {
             filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
         }
 
         .section1-title {
-            font-size: 45px;
+            font-size: 40px;
             font-family: 'Work Sans', sans-serif;
             font-weight: 700;
             color: white;
+            padding-right: 4rem;
+            letter-spacing: -2px;
         }
         .section1-subtitle {
             color: white;
-            width: 27vw;
+            width: 32.5vw;
+            line-height: 1.5rem;
+            font-size: 1.2rem;
         }
     }
     .container2 {
         height: 35rem;
-        width: 25rem;
+        width: 33rem;
+        margin-right: 46px;
         .gray-square {
             background: linear-gradient(109.61deg,#4c4f5a 4.26%,#202125 84.84%);
             border-radius: 10px;
-            height: 25rem;
+            height: 27rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
             .code-example {
+                padding-bottom: 1rem;
                 width: 300px;
-                height: 140px;
+                height: 8rem;
                 background: #1d1e22;
                 box-shadow: 0 4px 30px rgb(0 0 0 / 50%);
                 border-radius: 6px;
@@ -76,6 +86,7 @@
                 .code-section {
                     padding: .5rem;
                 }
+
                 .brown {
                     color: #A88038;
                 }
@@ -105,5 +116,23 @@
     }
 
 
+}
+
+.example1 {
+    margin-right: 3rem;
+    position: relative;
+    top: -20px;
+}
+
+.example2 {
+    margin-right: -3rem;
+    position: relative;
+    
+}
+
+.example3 {
+    margin-right: 5rem;
+    position: relative;
+    bottom: -20px;
 }
 

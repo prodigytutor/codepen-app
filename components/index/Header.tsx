@@ -38,8 +38,10 @@ const Header: FunctionComponent = () => {
             />
           <input type="text" placeholder='Search CodePen...' />
         </form>
-        <a className='btn sign-up' href="">Sign Up</a>
-        <a className='btn log-in' href="">Sign In</a>
+        <div className='flex-grow-1'>
+          <a className='btn sign-up' href="">Sign Up</a>
+          <a className='btn log-in' href="">Sign In</a>
+        </div>
     </div>
     </>
   )

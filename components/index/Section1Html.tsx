@@ -4,6 +4,7 @@ import Image from 'next/image'
 const Section1Html: FunctionComponent = () => {
   return (
     <>
+    <div className='example1'>
         <div className='code-example'>
             <div className='code-example-header'>
                 <div className='settings-label-container'>
@@ -44,6 +45,8 @@ const Section1Html: FunctionComponent = () => {
                 </span>
             </code>
         </div>
+    </div>
+    
     </>
   )
 }
