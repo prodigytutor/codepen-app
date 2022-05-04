@@ -5,28 +5,25 @@ const Header: FunctionComponent = () => {
   return (
     <>
     <div className='header'>
-      <div className='mobile-icons'>
-        <a className='mobile-icon' href="">
-          <Image 
-            height={50}
-            width={50}
+        {/* icons */}
+        <a href="">
+        <Image 
+            height={25}
+            width={25}
             alt={`search`}
             src={`/codepen-icon.svg`}
-            className='header-icon1'
-           />
+            className='header-icons'
+            />
         </a>
-        <div className='mobile-icon'>
-          <button>
-            <Image
-              height={40}
-              width={40}
+        <button>
+          <Image
+              height={25}
+              width={25}
               alt={`search`}
               src={`/menu.svg`}
               className='header-icons'
-             />
-          </button>
-        </div>
-        </div>  
+              />
+        </button>
         <form className='search-form' action="">
           <Image 
             height={25}
@@ -34,7 +31,6 @@ const Header: FunctionComponent = () => {
             alt={`search`}
             src={`/search.svg`}
             className='header-icons'
-            
             />
           <input type="text" placeholder='Search CodePen...' />
         </form>
