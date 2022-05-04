@@ -2,7 +2,7 @@
 
 
     .header {
-        margin-left: 198px;
+        margin-left: 202px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -86,20 +86,25 @@
             filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
         }
 
+        .mobile-href {
+            padding: .3rem;
+        }
+        .mobile-btn {
+            padding: .3rem;
+            background-color: #5a5f73;
+            border: none;
+            height: 2rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .mobile-icons {
             display: flex;
             flex-direction: row;
-            justify-content: center;
             align-items: center;
-            padding-left: 5px;
-            filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
-
-            .mobile-icon {
-                padding: 6px;
-                filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(168deg) brightness(118%) contrast(100%);
-            }
+            width: 7rem !important;
         }
-
         .search-form {
             display: flex;
             background-color: #252830;

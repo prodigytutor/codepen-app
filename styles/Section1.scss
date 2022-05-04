@@ -154,3 +154,16 @@
     bottom: -20px;
 }
 
+@media (max-width: 1100px) {
+    .section1-container {
+        padding-left: 240px;
+        padding-top: 3vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .gray-square {
+        width: 40rem;
+    }
+}
+
