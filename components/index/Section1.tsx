@@ -21,11 +21,17 @@ const Section1: FunctionComponent = () => {
             <a className='btn sign-up' href="">Sign Up for Free</a>
         </div>
         <div className='container2'>
-            <div className='gray-square'>
-              <Section1Html />
-              <Section1Css />
-              <Section1Js />
-            </div>
+          <div className='gray-square'>
+              <div>
+                <Section1Html />
+              </div>
+              <div>
+                <Section1Css />
+              </div>
+              <div>
+                <Section1Js />
+              </div>
+          </div>
         </div>
     </div>
     </>
