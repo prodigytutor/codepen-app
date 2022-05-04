@@ -21,14 +21,32 @@
             font-family: 'Work Sans', sans-serif;
             font-weight: 700;
             color: white;
-            padding-right: 4rem;
+            padding: 2rem 4rem 0 0;
             letter-spacing: -2px;
+            margin: 0;
         }
         .section1-subtitle {
             color: white;
             width: 32.5vw;
             line-height: 1.5rem;
             font-size: 1.2rem;
+        }
+        .btn {
+            display: flex;
+            background-color: #252830;
+            margin-top: 2rem;
+            padding: 1.6vh 1vw;
+            border-radius: 5px;
+            white-space: nowrap;
+            text-decoration: none;
+            width: 8rem;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .sign-up {
+            background-color: #47CF73;
+            color: black !important;
         }
     }
     .container2 {
