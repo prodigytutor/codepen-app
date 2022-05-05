@@ -3,6 +3,7 @@ import axios from 'axios'
 import Section2Card from './Section2Card'
 import Router from 'next/router'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Section2: FunctionComponent = () => {
 
@@ -79,6 +80,7 @@ const Section2: FunctionComponent = () => {
     }
 
     // URL thats work
+    // https://codepen.io/ryankendrick/pen/GRyojMr
     // https://codepen.io/michellebarker/pen/YzePRve.html  
     // https://codepen.io/z-/pen/OBPJKK 
     // https://codepen.io/hexagoncircle/pen/XWbWKwL
@@ -154,18 +156,18 @@ const Section2: FunctionComponent = () => {
             
         }),
         // 6
-        axios.get('https://codepen.io/z-/pen/OBPJKK.html')
+        axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.html')
         .then(response => {
             setHtml6(response.data)
         }),
 
-        axios.get('https://codepen.io/z-/pen/OBPJKK.css')
+        axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.css')
         .then(response => {
             setCss6(response.data)
         
         }),
 
-        axios.get('https://codepen.io/z-/pen/OBPJKK.js')
+        axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.js')
         .then(response => {
             setJs6(response.data)
             
@@ -215,29 +217,77 @@ const Section2: FunctionComponent = () => {
         <div className='section2'>
                 
 
-                <div className='card-container'>
-                    <h2>Find inspiration from 1.8 million+ 
-                    front-end designers and developers.</h2>
+                <div className='box1'>
+                    <h2 className='pen-title'>
+                        Find inspiration from 1.8 million+ 
+                        front-end designers and developers.
+                    </h2><br/>
+                    <span className='section2-subtitle'>
+                        Browse and share work from world-class 
+                        designers and developers in the front-end community.
+                    </span>
                 </div>
+
                 <div className='card-container'>
                     <Link href='/pen2' passHref >
                         <a onClick={sendProps2}>
                             <Section2Card
                             cardSrcDoc={srcDoc2}
                             />
-                            <span>by: gabriellewee</span>
                         </a>
                     </Link>
+                    <div className='pen-details'>
+                        <div>
+                            <Image
+                                src={`/user1.webp`}
+                                alt='user avatar'
+                                width={80}
+                                height={80}
+                                className='user-avatar'
+                                />
+                        </div>
+                        <div className='pen-labels'>
+                        <Link href='/pen2' passHref>
+                            <a className='pen-title' onClick={sendProps2}>
+                                <span className='pen-title'>CSS-Only Pokémon Quest Starter Icons</span>  
+                            </a>
+                        </Link>
+                        <a href='https://codepen.io/gabriellewee' target="_blank" rel="noreferrer">
+                            <span className='pen-author'>gabriellewee</span>
+                        </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div className='card-container'>
                     <Link href='/pen3' passHref >
                         <a onClick={sendProps3}>
                             <Section2Card
                             cardSrcDoc={srcDoc3}
                             />
-                            <span>by: Mamboleoo</span>
                         </a>
                     </Link>
+                    <div className='pen-details'>
+                        <div>
+                            <Image
+                                src={`/user2.webp`}
+                                alt='user avatar'
+                                width={80}
+                                height={80}
+                                className='user-avatar'
+                                />
+                        </div>
+                        <div className='pen-labels'>
+                        <Link href='/pen3' passHref>
+                            <a className='pen-title' onClick={sendProps3}>
+                                <span className='pen-title'>3D Globe (Pure canvas)</span>  
+                            </a>
+                        </Link>
+                        <a href='https://codepen.io/Mamboleoo' target="_blank" rel="noreferrer">
+                            <span className='pen-author'>Mamboleoo</span>
+                        </a>
+                        </div>
+                    </div>
                 </div>
                 <div className='card-container'>
                     <Link href='/pen4' passHref >
@@ -245,9 +295,29 @@ const Section2: FunctionComponent = () => {
                             <Section2Card
                             cardSrcDoc={srcDoc4}
                             />
-                            <span>by: aybukeceylan</span>
                         </a>
                     </Link>
+                    <div className='pen-details'>
+                        <div>
+                            <Image
+                                src={`/user3.webp`}
+                                alt='user avatar'
+                                width={80}
+                                height={80}
+                                className='user-avatar'
+                                />
+                        </div>
+                        <div className='pen-labels'>
+                        <Link href='/pen4' passHref>
+                            <a className='pen-title' onClick={sendProps4}>
+                                <span className='pen-title'>Job Recruiter Dashboard UI</span>  
+                            </a>
+                        </Link>
+                        <a href='https://codepen.io/aybukeceylan' target="_blank" rel="noreferrer">
+                            <span className='pen-author'>aybukeceylan</span>
+                        </a>
+                        </div>
+                    </div>
                 </div>
                 <div className='card-container'>
                     <Link href='/pen5' passHref >
@@ -255,9 +325,29 @@ const Section2: FunctionComponent = () => {
                             <Section2Card
                             cardSrcDoc={srcDoc5}
                             />
-                            <span>by: hexagoncircle</span>
                         </a>
                     </Link>
+                    <div className='pen-details'>
+                        <div>
+                            <Image
+                                src={`/user4.webp`}
+                                alt='user avatar'
+                                width={80}
+                                height={80}
+                                className='user-avatar'
+                                />
+                        </div>
+                        <div className='pen-labels'>
+                            <Link href='/pen5' passHref>
+                                <a className='pen-title' onClick={sendProps5}>
+                                    <span className='pen-title'>Card Hover Interactions</span>  
+                                </a>
+                            </Link>
+                            <a href='https://codepen.io/hexagoncircle' target="_blank" rel="noreferrer">
+                                <span className='pen-author'>hexagoncircle</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div className='card-container'>
                     <Link href='/pen6' passHref >
@@ -265,9 +355,29 @@ const Section2: FunctionComponent = () => {
                             <Section2Card
                             cardSrcDoc={srcDoc6}
                             />
-                            <span>by: z-</span>
                         </a>
                     </Link>
+                    <div className='pen-details'>
+                        <div>
+                            <Image
+                                src={`/user5.webp`}
+                                alt='user avatar'
+                                width={80}
+                                height={80}
+                                className='user-avatar'
+                                />
+                        </div>
+                        <div className='pen-labels'>
+                        <Link href='/pen6' passHref>
+                            <a className='pen-title' onClick={sendProps6}>
+                                <span className='pen-title'>Project Management Dashboard UI</span>  
+                            </a>
+                        </Link>
+                        <a href='https://codepen.io/aybukeceylan' target="_blank" rel="noreferrer">
+                            <span className='pen-author'>aybukeceylan</span>
+                        </a>
+                        </div>
+                    </div>
                 </div>
                 
      

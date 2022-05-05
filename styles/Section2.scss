@@ -1,15 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
 .section2 {
     padding-left: 200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
+    .box1 {
+        width: 18rem;
+        .section2-subtitle{
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: #c7c9d3;
+        }
+    }
     .card-container {
-        display: flex;
-        flex-direction: column;
-        width: 20rem;
-        cursor: pointer;
+        width: 18rem;
+        background-color: #1e1f26;
+        margin: 1rem;
+        align-items: center;
+        position: relative;
+        height: 15rem;
+        z-index: 1;
+        border-radius: 10px;
+        a {
+            display: flex;
+            flex-direction: column;
+            width: 18rem;
+            cursor: pointer;
+            .card-iframe {
+                border: none;
+                background-color: white;
+                z-index: -1000;
+                position: relative;
+                border-radius: 10px;
+                width: 18rem;
+                margin-top: -.5rem;
+                margin-left: -.5rem;
+            }
+        }
+        .pen-details {
+            display: flex;
+            margin-left: -.5rem;
+            padding-top: 1rem;
 
+            .user-avatar {
+                border-radius: 5px;
+                padding-right: 1rem;
+            }
+            .pen-labels {
+                padding-left: 1rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                a {
+                    text-decoration: none;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &:visited {
+                        text-decoration: none;
+                    }
+                }
+                
+
+                .pen-title {
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 700;
+                    color: white;
+                    width: 13rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .pen-author {
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 300;
+                    color: #c7c9d3;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+
+    }
+    h2 {
+        color: white;
     }
 
 }
