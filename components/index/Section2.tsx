@@ -27,13 +27,53 @@ const Section2: FunctionComponent = () => {
     const [css6, setCss6] = useState('')
     const [js6, setJs6] = useState('')
 
-    const sendProps = () => {
+    const sendProps2 = () => {
         Router.push({
             pathname: '/pen2',
             query: {
                 html2,
                 css2,
                 js2,
+            }
+        })
+    }
+    const sendProps3 = () => {
+        Router.push({
+            pathname: '/pen3',
+            query: {
+                html3,
+                css3,
+                js3,
+            }
+        })
+    }
+    const sendProps4 = () => {
+        Router.push({
+            pathname: '/pen4',
+            query: {
+                html4,
+                css4,
+                js4,
+            }
+        })
+    }
+    const sendProps5 = () => {
+        Router.push({
+            pathname: '/pen5',
+            query: {
+                html5,
+                css5,
+                js5,
+            }
+        })
+    }
+    const sendProps6 = () => {
+        Router.push({
+            pathname: '/pen6',
+            query: {
+                html6,
+                css6,
+                js6,
             }
         })
     }
@@ -181,35 +221,53 @@ const Section2: FunctionComponent = () => {
                 </div>
                 <div className='card-container'>
                     <Link href='/pen2' passHref >
-                            
-                            <a onClick={sendProps}>
-                                <Section2Card
-                                cardSrcDoc={srcDoc2}
-                                />
-                                <span>gabriellewee</span>
-                            </a>
-                    
+                        <a onClick={sendProps2}>
+                            <Section2Card
+                            cardSrcDoc={srcDoc2}
+                            />
+                            <span>by: gabriellewee</span>
+                        </a>
                     </Link>
                 </div>
                 <div className='card-container'>
-                    <Section2Card
-                    cardSrcDoc={srcDoc3}
-                    />
+                    <Link href='/pen3' passHref >
+                        <a onClick={sendProps3}>
+                            <Section2Card
+                            cardSrcDoc={srcDoc3}
+                            />
+                            <span>by: Mamboleoo</span>
+                        </a>
+                    </Link>
                 </div>
                 <div className='card-container'>
-                    <Section2Card
-                    cardSrcDoc={srcDoc4}
-                    />
+                    <Link href='/pen4' passHref >
+                        <a onClick={sendProps4}>
+                            <Section2Card
+                            cardSrcDoc={srcDoc4}
+                            />
+                            <span>by: aybukeceylan</span>
+                        </a>
+                    </Link>
                 </div>
                 <div className='card-container'>
-                    <Section2Card
-                    cardSrcDoc={srcDoc5}
-                    />
+                    <Link href='/pen5' passHref >
+                        <a onClick={sendProps5}>
+                            <Section2Card
+                            cardSrcDoc={srcDoc5}
+                            />
+                            <span>by: hexagoncircle</span>
+                        </a>
+                    </Link>
                 </div>
                 <div className='card-container'>
-                    <Section2Card
-                    cardSrcDoc={srcDoc6}
-                    />
+                    <Link href='/pen6' passHref >
+                        <a onClick={sendProps6}>
+                            <Section2Card
+                            cardSrcDoc={srcDoc6}
+                            />
+                            <span>by: z-</span>
+                        </a>
+                    </Link>
                 </div>
                 
      
