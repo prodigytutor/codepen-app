@@ -9,26 +9,12 @@ import EditorHeader from '../components/codepen/EditorHeader';
 import headerIcon from '../public/codepen-icon-small.svg';
 import editIcon from '../public/edit-icon.svg'
 
-// import axios from 'axios'
-
 const Codepen: NextPage = () => {
 
   const [html, setHtml] = useState('')
   const [css, setCss] = useState('')
   const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
-
-
-  // GET requests for html and js from a codepen id
-  // axios.get('https://codepen.io/chriscoyier/pen/gHnGD.html')
-  // .then(response => {
-  //   console.log('getPens html', response)
-  // })
-
-  // axios.get('https://codepen.io/chriscoyier/pen/gHnGD.js')
-  // .then(response => {
-  //   console.log('getPens js', response)
-  // })
   
   useEffect(() => {
     const timeout = setTimeout(() => {

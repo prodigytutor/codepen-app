@@ -6,6 +6,7 @@ import '/styles/Codepen.scss'
 import '/styles/Editor.scss'
 import '/styles/EditorHeader.scss'
 import '/styles/Section1.scss'
+import '/styles/Section2.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
