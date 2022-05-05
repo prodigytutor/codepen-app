@@ -7,14 +7,28 @@ import cssIcon from '../public/css-icon.svg';
 import Split from 'react-split'
 import EditorHeader from '../components/codepen/EditorHeader';
 import headerIcon from '../public/codepen-icon-small.svg';
-import editIcon from '../public/edit-icon.svg'
+import editIcon from '../public/edit-icon.svg';
+import { useRouter } from 'next/router';
 
-const Codepen: NextPage = () => {
 
+const Pen2: NextPage = () => {
 
-  const [html, setHtml] = useState('')
-  const [css, setCss] = useState('')
-  const [js, setJs] = useState('')
+  const router = useRouter()
+
+  const {
+    query: { html2, css2, js2 }
+  } = router
+
+  const props = {
+    html2,
+    css2,
+    js2,
+  }
+  
+
+  const [html, setHtml] = useState(props.html2)
+  const [css, setCss] = useState(props.css2)
+  const [js, setJs] = useState(props.js2)
   const [srcDoc, setSrcDoc] = useState('')
   
   useEffect(() => {
@@ -94,4 +108,4 @@ const Codepen: NextPage = () => {
   )
 }
 
-export default Codepen
+export default Pen2

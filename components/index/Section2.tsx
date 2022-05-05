@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useState } from 'react'
 import axios from 'axios'
 import Section2Card from './Section2Card'
 import Router from 'next/router'
+import Link from 'next/link'
 
 const Section2: FunctionComponent = () => {
 
@@ -26,6 +27,16 @@ const Section2: FunctionComponent = () => {
     const [css6, setCss6] = useState('')
     const [js6, setJs6] = useState('')
 
+    const sendProps = () => {
+        Router.push({
+            pathname: '/pen2',
+            query: {
+                html2,
+                css2,
+                js2,
+            }
+        })
+    }
 
     // URL thats work
     // https://codepen.io/michellebarker/pen/YzePRve.html  
@@ -39,7 +50,6 @@ const Section2: FunctionComponent = () => {
         axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
         .then(response => {
             setHtml2(response.data)
-            console.log('/pen', response.data)
         }),
 
         axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
@@ -56,7 +66,6 @@ const Section2: FunctionComponent = () => {
         axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html')
         .then(response => {
             setHtml3(response.data)
-            console.log('/pen', response.data)
         }),
 
         axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css')
@@ -74,7 +83,6 @@ const Section2: FunctionComponent = () => {
         axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html')
         .then(response => {
             setHtml4(response.data)
-            console.log('/pen', response.data)
         }),
 
         axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css')
@@ -92,7 +100,6 @@ const Section2: FunctionComponent = () => {
         axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.html')
         .then(response => {
             setHtml5(response.data)
-            console.log('/pen', response.data)
         }),
 
         axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.css')
@@ -110,7 +117,6 @@ const Section2: FunctionComponent = () => {
         axios.get('https://codepen.io/z-/pen/OBPJKK.html')
         .then(response => {
             setHtml6(response.data)
-            console.log('/pen', response.data)
         }),
 
         axios.get('https://codepen.io/z-/pen/OBPJKK.css')
@@ -174,10 +180,16 @@ const Section2: FunctionComponent = () => {
                     front-end designers and developers.</h2>
                 </div>
                 <div className='card-container'>
-                    <Section2Card
-                    cardSrcDoc={srcDoc2}
-                    />
-                    <span>gabriellewee</span>
+                    <Link href='/pen2' passHref >
+                            
+                            <a onClick={sendProps}>
+                                <Section2Card
+                                cardSrcDoc={srcDoc2}
+                                />
+                                <span>gabriellewee</span>
+                            </a>
+                    
+                    </Link>
                 </div>
                 <div className='card-container'>
                     <Section2Card
