@@ -40,6 +40,9 @@
             font-weight: bold;
             color: #868892;
             padding-left: 1vw;
+            &:focus {
+                border: none;
+            }
         }
     
         .btn {

@@ -21,10 +21,16 @@
 .gutter-horizontal {
     width: 18px !important;
     border-top: solid 0.3px #34363e;
+    &:hover {
+        cursor: col-resize;
+    }
 }
 .gutter-vertical {
     height: 18px !important;
     border-top: 0.3px solid #34363e;
+    &:hover {
+        cursor: row-resize;
+    }
 }
 
 .iframe {
