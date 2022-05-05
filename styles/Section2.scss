@@ -1,32 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
 
 .section2 {
-    padding-left: 200px;
+    padding-left: 240px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
+    width: 80%;
     .box1 {
-        width: 18rem;
+        width: 22rem;
         .section2-subtitle{
-            font-family: 'Lato', sans-serif;
+            font-family: "Lato", sans-serif;
             font-weight: 300;
             color: #c7c9d3;
+            font-size: 18px;
         }
     }
     .card-container {
-        width: 18rem;
+        width: 88%;
         background-color: #1e1f26;
         margin: 1rem;
         align-items: center;
         position: relative;
-        height: 15rem;
+        height: auto;
         z-index: 1;
         border-radius: 10px;
         a {
             display: flex;
             flex-direction: column;
-            width: 18rem;
             cursor: pointer;
             .card-iframe {
                 border: none;
@@ -34,9 +35,10 @@
                 z-index: -1000;
                 position: relative;
                 border-radius: 10px;
-                width: 18rem;
-                margin-top: -.5rem;
-                margin-left: -.5rem;
+                width: auto;
+                margin-top: -0.5rem;
+                margin-left: -0.5rem;
+                height: 15rem;
             }
         }
         .pen-details {
@@ -87,6 +89,7 @@
     }
     h2 {
         color: white;
+        font-size: 25px;
     }
 
 }
@@ -97,3 +100,7 @@
         grid-template-rows: 1fr 1fr 1fr;
     }
 } 
+
+// overflow-wrap: normal;
+
+// overflow-wrap: break-word;

@@ -79,15 +79,6 @@ const Section2: FunctionComponent = () => {
         })
     }
 
-    // URL thats work
-    // https://codepen.io/ryankendrick/pen/GRyojMr
-    // https://codepen.io/michellebarker/pen/YzePRve.html  
-    // https://codepen.io/z-/pen/OBPJKK 
-    // https://codepen.io/hexagoncircle/pen/XWbWKwL
-    // https://codepen.io/aybukeceylan/pen/poEqdWZ
-    // Animations:
-    // https://codepen.io/Mamboleoo/pen/rNzYPjq
-
     axios.all([
         axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
         .then(response => {
@@ -241,8 +232,8 @@ const Section2: FunctionComponent = () => {
                             <Image
                                 src={`/user1.webp`}
                                 alt='user avatar'
-                                width={80}
-                                height={80}
+                                width={50}
+                                height={50}
                                 className='user-avatar'
                                 />
                         </div>
@@ -272,8 +263,8 @@ const Section2: FunctionComponent = () => {
                             <Image
                                 src={`/user2.webp`}
                                 alt='user avatar'
-                                width={80}
-                                height={80}
+                                width={50}
+                                height={50}
                                 className='user-avatar'
                                 />
                         </div>
@@ -302,8 +293,8 @@ const Section2: FunctionComponent = () => {
                             <Image
                                 src={`/user3.webp`}
                                 alt='user avatar'
-                                width={80}
-                                height={80}
+                                width={50}
+                                height={50}
                                 className='user-avatar'
                                 />
                         </div>
@@ -332,8 +323,8 @@ const Section2: FunctionComponent = () => {
                             <Image
                                 src={`/user4.webp`}
                                 alt='user avatar'
-                                width={80}
-                                height={80}
+                                width={50}
+                                height={50}
                                 className='user-avatar'
                                 />
                         </div>
@@ -362,8 +353,8 @@ const Section2: FunctionComponent = () => {
                             <Image
                                 src={`/user5.webp`}
                                 alt='user avatar'
-                                width={80}
-                                height={80}
+                                width={50}
+                                height={50}
                                 className='user-avatar'
                                 />
                         </div>
