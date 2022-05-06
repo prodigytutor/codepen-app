@@ -13,27 +13,17 @@ import axios from 'axios';
 
 const Pen2: NextPage = () => {
 
-  const router = useRouter()
   const title = 'CSS-Only Pokémon Quest Starter Icons'
   const author = 'gabriellewee'
 
-  const {
-    query: { html2, css2, js2 }
-  } = router
 
-  const props = {
-    html2,
-    css2,
-    js2,
-  }
-
-  const [html, setHtml] = useState(props.html2)
-  const [css, setCss] = useState(props.css2)
-  const [js, setJs] = useState(props.js2)
+  const [html, setHtml] = useState('')
+  const [css, setCss] = useState('')
+  const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
 
   const getData = async () => {
-    try {
+  
       await axios.all([
         axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
         .then(response => {
@@ -51,16 +41,12 @@ const Pen2: NextPage = () => {
             setJs(response.data)
         })
       ])
-    } catch (error) {
-      console.log(error)
-    }
     
   }
+ 
+  getData();
   
 
-  useEffect(() => {
-    getData();
-  })
   
   useEffect(() => {
     const timeout = setTimeout(() => {

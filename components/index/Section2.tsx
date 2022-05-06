@@ -28,16 +28,16 @@ const Section2: FunctionComponent = () => {
     const [css6, setCss6] = useState('')
     const [js6, setJs6] = useState('')
 
-    const sendProps2 = () => {
-        Router.push({
-            pathname: '/pen2',
-            query: {
-                html2,
-                css2,
-                js2,
-            }
-        })
-    }
+    // const sendProps2 = () => {
+    //     Router.push({
+    //         pathname: '/pen2',
+    //         query: {
+    //             html2,
+    //             css2,
+    //             js2,
+    //         }
+    //     })
+    // }
     const sendProps3 = () => {
         Router.push({
             pathname: '/pen3',
@@ -214,7 +214,7 @@ const Section2: FunctionComponent = () => {
 
             <div className='card-container'>
                 <Link href='/pen2' passHref >
-                    <a onClick={sendProps2}>
+                    <a>
                         <Section2Card
                         cardSrcDoc={srcDoc2}
                         />
@@ -232,7 +232,7 @@ const Section2: FunctionComponent = () => {
                     </div>
                     <div className='pen-labels'>
                     <Link href='/pen2' passHref>
-                        <a className='pen-title' onClick={sendProps2}>
+                        <a className='pen-title'>
                             <span className='pen-title'>CSS-Only Pokémon Quest Starter Icons</span>  
                         </a>
                     </Link>
@@ -245,7 +245,7 @@ const Section2: FunctionComponent = () => {
 
             <div className='card-container'>
                 <Link href='/pen3' passHref >
-                    <a onClick={sendProps3}>
+                    <a>
                         <Section2Card
                         cardSrcDoc={srcDoc3}
                         />
@@ -263,7 +263,7 @@ const Section2: FunctionComponent = () => {
                     </div>
                     <div className='pen-labels'>
                     <Link href='/pen3' passHref>
-                        <a className='pen-title' onClick={sendProps3}>
+                        <a className='pen-title'>
                             <span className='pen-title'>3D Globe (Pure canvas)</span>  
                         </a>
                     </Link>
@@ -275,7 +275,7 @@ const Section2: FunctionComponent = () => {
             </div>
             <div className='card-container'>
                 <Link href='/pen4' passHref >
-                    <a onClick={sendProps4}>
+                    <a>
                         <Section2Card
                         cardSrcDoc={srcDoc4}
                         />
@@ -293,7 +293,7 @@ const Section2: FunctionComponent = () => {
                     </div>
                     <div className='pen-labels'>
                     <Link href='/pen4' passHref>
-                        <a className='pen-title' onClick={sendProps4}>
+                        <a className='pen-title'>
                             <span className='pen-title'>Job Recruiter Dashboard UI</span>  
                         </a>
                     </Link>

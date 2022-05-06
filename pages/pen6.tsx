@@ -13,23 +13,23 @@ import axios from 'axios';
 
 const Pen6: NextPage = () => {
 
-  const router = useRouter()
+  // const router = useRouter()
   const title = 'Project Management Dashboard UI'
   const author = 'aybukeceylan'
 
-  const {
-    query: { html6, css6, js6 }
-  } = router
+  // const {
+  //   query: { html6, css6, js6 }
+  // } = router
 
-  const props = {
-    html6,
-    css6,
-    js6,
-  }
+  // const props = {
+  //   html6,
+  //   css6,
+  //   js6,
+  // }
   
-  const [html, setHtml] = useState(props.html6)
-  const [css, setCss] = useState(props.css6)
-  const [js, setJs] = useState(props.js6)
+  const [html, setHtml] = useState('')
+  const [css, setCss] = useState('')
+  const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
 
   const getData = async () => {

@@ -13,23 +13,13 @@ import axios from 'axios';
 
 const Pen5: NextPage = () => {
 
-  const router = useRouter()
   const title = 'Card Hover Interactions'
   const author = 'hexagoncircle'
 
-  const {
-    query: { html5, css5, js5 }
-  } = router
-
-  const props = {
-    html5,
-    css5,
-    js5,
-  }
   
-  const [html, setHtml] = useState(props.html5)
-  const [css, setCss] = useState(props.css5)
-  const [js, setJs] = useState(props.js5)
+  const [html, setHtml] = useState('')
+  const [css, setCss] = useState('')
+  const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
 
   const getData = async () => {

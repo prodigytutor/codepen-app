@@ -8,28 +8,16 @@ import Split from 'react-split'
 import EditorHeader from '../components/codepen/EditorHeader';
 import headerIcon from '../public/codepen-icon-small.svg';
 import editIcon from '../public/edit-icon.svg';
-import { useRouter } from 'next/router';
 import axios from 'axios';
 
 const Pen4: NextPage = () => {
 
-  const router = useRouter()
   const title = 'Job Recruiter Dashboard UI'
   const author = 'aybukeceylan'
 
-  const {
-    query: { html4, css4, js4 }
-  } = router
-
-  const props = {
-    html4,
-    css4,
-    js4,
-  }
-  
-  const [html, setHtml] = useState(props.html4)
-  const [css, setCss] = useState(props.css4)
-  const [js, setJs] = useState(props.js4)
+  const [html, setHtml] = useState('')
+  const [css, setCss] = useState('')
+  const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
 
   const getData = async () => {
@@ -50,8 +38,8 @@ const Pen4: NextPage = () => {
           })
     ])    
   }
+
   getData();
-  
   
   useEffect(() => {
     const timeout = setTimeout(() => {

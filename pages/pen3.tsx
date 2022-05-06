@@ -14,46 +14,37 @@ import axios from 'axios';
 
 const Pen3: NextPage = () => {
 
-  const router = useRouter()
   const title = '3D Globe (Pure canvas)'
   const author = 'Mamboleoo'
 
-  const {
-    query: { html3, css3, js3 }
-  } = router
-
-  const props = {
-    html3,
-    css3,
-    js3,
-  }
-  
-  const [html, setHtml] = useState(props.html3)
-  const [css, setCss] = useState(props.css3)
-  const [js, setJs] = useState(props.js3)
+  const [html, setHtml] = useState('')
+  const [css, setCss] = useState('')
+  const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
 
   const getData = async () => {
-    await axios.all([
-      axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html')
-          .then(response => {
-                setHtml(response.data)
+   
+      await axios.all([
+        axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html')
+            .then(response => {
+                  setHtml(response.data)
+              }),
+    
+            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css')
+            .then(response => {
+                setCss(response.data)
+            
             }),
-  
-          axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css')
-          .then(response => {
-              setCss(response.data)
-          
-          }),
-  
-          axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.js')
-          .then(response => {
-              setJs(response.data)
-          })
-    ])
+    
+            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.js')
+            .then(response => {
+                setJs(response.data)
+            })
+      ])
+    
   }
-  getData();
   
+  getData();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
