@@ -101,6 +101,23 @@
     }
 } 
 
+@media (max-width: 950px) {
+    .section2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+} 
+
+@media (max-width: 830px) {
+    .section2 {
+        padding-left: 15px;
+    }
+    .box1 {
+        width: auto !important;
+        padding: 2rem;
+    }
+} 
+
 // overflow-wrap: normal;
 
 // overflow-wrap: break-word;
