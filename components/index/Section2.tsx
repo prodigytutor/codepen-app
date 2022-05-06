@@ -80,7 +80,7 @@ const Section2: FunctionComponent = () => {
     }
 
     const getData = async () => {
-        await axios.all([
+         await axios.all([
             axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
             .then(response => {
                 setHtml2(response.data)
