@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic'
 import CodeMirror from '@uiw/react-codemirror'
 import Image from 'next/image'
 
-
 interface EditorProps { 
   language: string;
   displayName: string;
@@ -24,9 +23,8 @@ const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, o
     return require('@uiw/react-codemirror')
   }, {ssr: false})
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange : React.ChangeEventHandler<HTMLInputElement> = (event) => {
     onChange(event)
-    console.log('handleChange')
   }
 
 
