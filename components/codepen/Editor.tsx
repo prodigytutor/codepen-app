@@ -46,13 +46,13 @@ const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, o
               {CodeMirrorRefresh && <CodeMirror
                     onChange={handleChange}
                     value={value}
-                    options={{
-                        lineWrapping: true,
-                        lint: true,
-                        lineNumbers: true,
-                        mode: language,
+                    // options={{
+                    //     lineWrapping: true,
+                    //     lint: true,
+                    //     lineNumbers: true,
+                    //     mode: language,
                         // theme: 'material',
-                    }}
+                    // }}
                 />} 
           </div>
       
