@@ -8,6 +8,7 @@ import Split from 'react-split'
 import EditorHeader from '../components/codepen/EditorHeader';
 import headerIcon from '../public/codepen-icon-small.svg';
 import editIcon from '../public/edit-icon.svg'
+import Footer from '../components/codepen/Footer';
 
 const Codepen: NextPage = () => {
 
@@ -16,6 +17,8 @@ const Codepen: NextPage = () => {
   const [css, setCss] = useState('')
   const [js, setJs] = useState('')
   const [srcDoc, setSrcDoc] = useState('')
+  const title = 'Untitled'
+  const author = 'Captain Anonymous'
   
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -37,8 +40,10 @@ const Codepen: NextPage = () => {
     <EditorHeader 
       codepenIcon={headerIcon}
       editIcon={editIcon}
+      title={title}
+      author={author}
       />
-    <Split className='split' direction='vertical' style={{ height: '100vh'}}>
+    <Split className='split' direction='vertical'>
    
       <div className='editors-wrapper'>
 
@@ -87,9 +92,12 @@ const Codepen: NextPage = () => {
               height='100%'
               className='iframe-codepen-page'
           />
+          <Footer />
       </div>
-
+   
+      
     </Split>
+    
     </>
   )
 }

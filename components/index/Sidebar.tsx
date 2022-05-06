@@ -11,7 +11,7 @@ const Sidebar: FunctionComponent = () => {
         height={454} 
         src={`/codepen-logo.svg`} 
         alt={`side-bar`} 
-        className={`sidebar-icon`}
+        className='sidebar-icon'
       />
       <span className='sidebar-subtitle'>TRY OUR ONLINE EDITOR</span>
       {/* next/link href only needs '/' + page name (no file extension) */}

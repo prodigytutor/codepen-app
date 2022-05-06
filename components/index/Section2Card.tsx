@@ -10,7 +10,7 @@ const Section2Card: FunctionComponent<Section2CardProps> = ({cardSrcDoc}) => {
     <iframe 
         srcDoc={cardSrcDoc}
         className='card-iframe'
-        scrolling='no' 
+        // scrolling='yes' 
     />
     </>
   )

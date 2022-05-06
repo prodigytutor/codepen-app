@@ -80,90 +80,84 @@ const Section2: FunctionComponent = () => {
     }
 
     axios.all([
-        axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
-        .then(response => {
-            setHtml2(response.data)
-        }),
-
-        axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
-        .then(response => {
-            setCss2(response.data)
-        
-        }),
-
-        axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
-        .then(response => {
-            setJs2(response.data)
-        }),
-        
-        axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html')
-        .then(response => {
-            setHtml3(response.data)
-        }),
-
-        axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css')
-        .then(response => {
-            setCss3(response.data)
-        
-        }),
-
-        axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.js')
-        .then(response => {
-            setJs3(response.data)
+            axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
+            .then(response => {
+                setHtml2(response.data)
+            }),
+    
+            axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
+            .then(response => {
+                setCss2(response.data)
+            }),
+    
+            axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
+            .then(response => {
+                setJs2(response.data)
+            }),
             
-        }),
-        // 4
-        axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html')
-        .then(response => {
-            setHtml4(response.data)
-        }),
+            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html')
+            .then(response => {
+                setHtml3(response.data)
+            }),
+    
+            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css')
+            .then(response => {
+                setCss3(response.data)
+            }),
+    
+            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.js')
+            .then(response => {
+                setJs3(response.data)
+            }),
+            // 4
+            axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html')
+            .then(response => {
+                setHtml4(response.data)
+            }),
+    
+            axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css')
+            .then(response => {
+                setCss4(response.data)
+            }),
+    
+            axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.js')
+            .then(response => {
+                setJs4(response.data)
+            }),
+            // 5
+            axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.html')
+            .then(response => {
+                setHtml5(response.data)
+            }),
+    
+            axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.css')
+            .then(response => {
+                setCss5(response.data)
+            }),
+    
+            axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.js')
+            .then(response => {
+                setJs5(response.data)
+            }),
+            // 6
+            axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.html')
+            .then(response => {
+                setHtml6(response.data)
+            }),
+    
+            axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.css')
+            .then(response => {
+                setCss6(response.data)
+            }),
+    
+            axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.js')
+            .then(response => {
+                setJs6(response.data)
+            })
+        ])
 
-        axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css')
-        .then(response => {
-            setCss4(response.data)
-        
-        }),
 
-        axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.js')
-        .then(response => {
-            setJs4(response.data)
-            
-        }),
-        // 5
-        axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.html')
-        .then(response => {
-            setHtml5(response.data)
-        }),
 
-        axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.css')
-        .then(response => {
-            setCss5(response.data)
-        
-        }),
-
-        axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.js')
-        .then(response => {
-            setJs5(response.data)
-            
-        }),
-        // 6
-        axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.html')
-        .then(response => {
-            setHtml6(response.data)
-        }),
-
-        axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.css')
-        .then(response => {
-            setCss6(response.data)
-        
-        }),
-
-        axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.js')
-        .then(response => {
-            setJs6(response.data)
-            
-        })
-    ])
 
     useEffect(() => {
         setSrcDoc2(`
@@ -206,172 +200,168 @@ const Section2: FunctionComponent = () => {
   return (
     <>
         <div className='section2'>
-                
+            <div className='box1'>
+                <h2 className='pen-title'>
+                    Find inspiration from 1.8 million+ 
+                    front-end designers and developers.
+                </h2><br/>
+                <span className='section2-subtitle'>
+                    Browse and share work from world-class 
+                    designers and developers in the front-end community.
+                </span>
+            </div>
 
-                <div className='box1'>
-                    <h2 className='pen-title'>
-                        Find inspiration from 1.8 million+ 
-                        front-end designers and developers.
-                    </h2><br/>
-                    <span className='section2-subtitle'>
-                        Browse and share work from world-class 
-                        designers and developers in the front-end community.
-                    </span>
+            <div className='card-container'>
+                <Link href='/pen2' passHref >
+                    <a onClick={sendProps2}>
+                        <Section2Card
+                        cardSrcDoc={srcDoc2}
+                        />
+                    </a>
+                </Link>
+                <div className='pen-details'>
+                    <div>
+                        <Image
+                            src={`/user1.webp`}
+                            alt='user avatar'
+                            width={50}
+                            height={50}
+                            className='user-avatar'
+                            />
+                    </div>
+                    <div className='pen-labels'>
+                    <Link href='/pen2' passHref>
+                        <a className='pen-title' onClick={sendProps2}>
+                            <span className='pen-title'>CSS-Only Pokémon Quest Starter Icons</span>  
+                        </a>
+                    </Link>
+                    <a href='https://codepen.io/gabriellewee' target="_blank" rel="noreferrer">
+                        <span className='pen-author'>gabriellewee</span>
+                    </a>
+                    </div>
                 </div>
+            </div>
 
-                <div className='card-container'>
-                    <Link href='/pen2' passHref >
-                        <a onClick={sendProps2}>
-                            <Section2Card
-                            cardSrcDoc={srcDoc2}
+            <div className='card-container'>
+                <Link href='/pen3' passHref >
+                    <a onClick={sendProps3}>
+                        <Section2Card
+                        cardSrcDoc={srcDoc3}
+                        />
+                    </a>
+                </Link>
+                <div className='pen-details'>
+                    <div>
+                        <Image
+                            src={`/user2.webp`}
+                            alt='user avatar'
+                            width={50}
+                            height={50}
+                            className='user-avatar'
                             />
+                    </div>
+                    <div className='pen-labels'>
+                    <Link href='/pen3' passHref>
+                        <a className='pen-title' onClick={sendProps3}>
+                            <span className='pen-title'>3D Globe (Pure canvas)</span>  
                         </a>
                     </Link>
-                    <div className='pen-details'>
-                        <div>
-                            <Image
-                                src={`/user1.webp`}
-                                alt='user avatar'
-                                width={50}
-                                height={50}
-                                className='user-avatar'
-                                />
-                        </div>
-                        <div className='pen-labels'>
-                        <Link href='/pen2' passHref>
-                            <a className='pen-title' onClick={sendProps2}>
-                                <span className='pen-title'>CSS-Only Pokémon Quest Starter Icons</span>  
+                    <a href='https://codepen.io/Mamboleoo' target="_blank" rel="noreferrer">
+                        <span className='pen-author'>Mamboleoo</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div className='card-container'>
+                <Link href='/pen4' passHref >
+                    <a onClick={sendProps4}>
+                        <Section2Card
+                        cardSrcDoc={srcDoc4}
+                        />
+                    </a>
+                </Link>
+                <div className='pen-details'>
+                    <div>
+                        <Image
+                            src={`/user3.webp`}
+                            alt='user avatar'
+                            width={50}
+                            height={50}
+                            className='user-avatar'
+                            />
+                    </div>
+                    <div className='pen-labels'>
+                    <Link href='/pen4' passHref>
+                        <a className='pen-title' onClick={sendProps4}>
+                            <span className='pen-title'>Job Recruiter Dashboard UI</span>  
+                        </a>
+                    </Link>
+                    <a href='https://codepen.io/aybukeceylan' target="_blank" rel="noreferrer">
+                        <span className='pen-author'>aybukeceylan</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div className='card-container'>
+                <Link href='/pen5' passHref >
+                    <a onClick={sendProps5}>
+                        <Section2Card
+                        cardSrcDoc={srcDoc5}
+                        />
+                    </a>
+                </Link>
+                <div className='pen-details'>
+                    <div>
+                        <Image
+                            src={`/user4.webp`}
+                            alt='user avatar'
+                            width={50}
+                            height={50}
+                            className='user-avatar'
+                            />
+                    </div>
+                    <div className='pen-labels'>
+                        <Link href='/pen5' passHref>
+                            <a className='pen-title' onClick={sendProps5}>
+                                <span className='pen-title'>Card Hover Interactions</span>  
                             </a>
                         </Link>
-                        <a href='https://codepen.io/gabriellewee' target="_blank" rel="noreferrer">
-                            <span className='pen-author'>gabriellewee</span>
+                        <a href='https://codepen.io/hexagoncircle' target="_blank" rel="noreferrer">
+                            <span className='pen-author'>hexagoncircle</span>
                         </a>
-                        </div>
                     </div>
                 </div>
-
-                <div className='card-container'>
-                    <Link href='/pen3' passHref >
-                        <a onClick={sendProps3}>
-                            <Section2Card
-                            cardSrcDoc={srcDoc3}
+            </div>
+            <div className='card-container'>
+                <Link href='/pen6' passHref >
+                    <a onClick={sendProps6}>
+                        <Section2Card
+                        cardSrcDoc={srcDoc6}
+                        />
+                    </a>
+                </Link>
+                <div className='pen-details'>
+                    <div>
+                        <Image
+                            src={`/user5.webp`}
+                            alt='user avatar'
+                            width={50}
+                            height={50}
+                            className='user-avatar'
                             />
+                    </div>
+                    <div className='pen-labels'>
+                    <Link href='/pen6' passHref>
+                        <a className='pen-title' onClick={sendProps6}>
+                            <span className='pen-title'>Project Management Dashboard UI</span>  
                         </a>
                     </Link>
-                    <div className='pen-details'>
-                        <div>
-                            <Image
-                                src={`/user2.webp`}
-                                alt='user avatar'
-                                width={50}
-                                height={50}
-                                className='user-avatar'
-                                />
-                        </div>
-                        <div className='pen-labels'>
-                        <Link href='/pen3' passHref>
-                            <a className='pen-title' onClick={sendProps3}>
-                                <span className='pen-title'>3D Globe (Pure canvas)</span>  
-                            </a>
-                        </Link>
-                        <a href='https://codepen.io/Mamboleoo' target="_blank" rel="noreferrer">
-                            <span className='pen-author'>Mamboleoo</span>
-                        </a>
-                        </div>
+                    <a href='https://codepen.io/aybukeceylan' target="_blank" rel="noreferrer">
+                        <span className='pen-author'>aybukeceylan</span>
+                    </a>
                     </div>
                 </div>
-                <div className='card-container'>
-                    <Link href='/pen4' passHref >
-                        <a onClick={sendProps4}>
-                            <Section2Card
-                            cardSrcDoc={srcDoc4}
-                            />
-                        </a>
-                    </Link>
-                    <div className='pen-details'>
-                        <div>
-                            <Image
-                                src={`/user3.webp`}
-                                alt='user avatar'
-                                width={50}
-                                height={50}
-                                className='user-avatar'
-                                />
-                        </div>
-                        <div className='pen-labels'>
-                        <Link href='/pen4' passHref>
-                            <a className='pen-title' onClick={sendProps4}>
-                                <span className='pen-title'>Job Recruiter Dashboard UI</span>  
-                            </a>
-                        </Link>
-                        <a href='https://codepen.io/aybukeceylan' target="_blank" rel="noreferrer">
-                            <span className='pen-author'>aybukeceylan</span>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-                <div className='card-container'>
-                    <Link href='/pen5' passHref >
-                        <a onClick={sendProps5}>
-                            <Section2Card
-                            cardSrcDoc={srcDoc5}
-                            />
-                        </a>
-                    </Link>
-                    <div className='pen-details'>
-                        <div>
-                            <Image
-                                src={`/user4.webp`}
-                                alt='user avatar'
-                                width={50}
-                                height={50}
-                                className='user-avatar'
-                                />
-                        </div>
-                        <div className='pen-labels'>
-                            <Link href='/pen5' passHref>
-                                <a className='pen-title' onClick={sendProps5}>
-                                    <span className='pen-title'>Card Hover Interactions</span>  
-                                </a>
-                            </Link>
-                            <a href='https://codepen.io/hexagoncircle' target="_blank" rel="noreferrer">
-                                <span className='pen-author'>hexagoncircle</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className='card-container'>
-                    <Link href='/pen6' passHref >
-                        <a onClick={sendProps6}>
-                            <Section2Card
-                            cardSrcDoc={srcDoc6}
-                            />
-                        </a>
-                    </Link>
-                    <div className='pen-details'>
-                        <div>
-                            <Image
-                                src={`/user5.webp`}
-                                alt='user avatar'
-                                width={50}
-                                height={50}
-                                className='user-avatar'
-                                />
-                        </div>
-                        <div className='pen-labels'>
-                        <Link href='/pen6' passHref>
-                            <a className='pen-title' onClick={sendProps6}>
-                                <span className='pen-title'>Project Management Dashboard UI</span>  
-                            </a>
-                        </Link>
-                        <a href='https://codepen.io/aybukeceylan' target="_blank" rel="noreferrer">
-                            <span className='pen-author'>aybukeceylan</span>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-                
-     
+            </div>
         </div>
     </>
   )

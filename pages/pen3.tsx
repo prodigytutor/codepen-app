@@ -9,11 +9,14 @@ import EditorHeader from '../components/codepen/EditorHeader';
 import headerIcon from '../public/codepen-icon-small.svg';
 import editIcon from '../public/edit-icon.svg';
 import { useRouter } from 'next/router';
+import axios from 'axios';
 
 
 const Pen3: NextPage = () => {
 
   const router = useRouter()
+  const title = '3D Globe (Pure canvas)'
+  const author = 'Mamboleoo'
 
   const {
     query: { html3, css3, js3 }
@@ -25,12 +28,29 @@ const Pen3: NextPage = () => {
     js3,
   }
   
-
   const [html, setHtml] = useState(props.html3)
   const [css, setCss] = useState(props.css3)
   const [js, setJs] = useState(props.js3)
   const [srcDoc, setSrcDoc] = useState('')
-  
+
+  axios.all([
+    axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html')
+        .then(response => {
+              setHtml(response.data)
+          }),
+
+        axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css')
+        .then(response => {
+            setCss(response.data)
+        
+        }),
+
+        axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.js')
+        .then(response => {
+            setJs(response.data)
+        })
+  ])
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(`
@@ -51,13 +71,12 @@ const Pen3: NextPage = () => {
     <EditorHeader 
       codepenIcon={headerIcon}
       editIcon={editIcon}
+      author={author}
+      title={title}
       />
     <Split className='split' direction='vertical' style={{ height: '100vh'}}>
    
       <div className='editors-wrapper'>
-
-      
-        
           <Split className='editors' direction='horizontal'>
             <div className='left-divider-wrapper'>
             <div className='left-divider'/>
@@ -88,7 +107,6 @@ const Pen3: NextPage = () => {
               />
             </div>
           </Split>
-      
       </div>
 
       <div className='iframe'>

@@ -9,11 +9,13 @@ import EditorHeader from '../components/codepen/EditorHeader';
 import headerIcon from '../public/codepen-icon-small.svg';
 import editIcon from '../public/edit-icon.svg';
 import { useRouter } from 'next/router';
-
+import axios from 'axios';
 
 const Pen4: NextPage = () => {
 
   const router = useRouter()
+  const title = 'Job Recruiter Dashboard UI'
+  const author = 'aybukeceylan'
 
   const {
     query: { html4, css4, js4 }
@@ -25,11 +27,29 @@ const Pen4: NextPage = () => {
     js4,
   }
   
-
   const [html, setHtml] = useState(props.html4)
   const [css, setCss] = useState(props.css4)
   const [js, setJs] = useState(props.js4)
   const [srcDoc, setSrcDoc] = useState('')
+
+
+
+  axios.all([
+    axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html')
+        .then(response => {
+            setHtml(response.data)
+        }),
+
+        axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css')
+        .then(response => {
+            setCss(response.data)
+        }),
+
+        axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.js')
+        .then(response => {
+            setJs(response.data)
+        })
+  ])    
   
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -51,13 +71,13 @@ const Pen4: NextPage = () => {
     <EditorHeader 
       codepenIcon={headerIcon}
       editIcon={editIcon}
+      title={title}
+      author={author}
       />
     <Split className='split' direction='vertical' style={{ height: '100vh'}}>
    
       <div className='editors-wrapper'>
 
-      
-        
           <Split className='editors' direction='horizontal'>
             <div className='left-divider-wrapper'>
             <div className='left-divider'/>

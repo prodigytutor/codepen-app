@@ -48,6 +48,7 @@
         word-wrap: break-word;
         white-space: pre-wrap;
         word-break: normal;
+        padding: 0px 2px 0 40px !important;
     }
     .cm-editor {
         height: 100%;
@@ -77,19 +78,18 @@
 
     .cm-scroller {
         background-color: #1d1e22;
-        html::-webkit-scrollbar {
-            width: 20px; 
-         }
-        
-        html::-webkit-scrollbar-track {
-          background-color: #131417;
-        }
-        
-        
-        html::-webkit-scrollbar-thumb {
-          background: #2c2c2c;
-          border-radius: 25px;
-        }
+    }
+    .cm-scroller::-webkit-scrollbar {
+        width: 10px; 
+    }
+    
+    .cm-scroller::-webkit-scrollbar-track {
+        background-color: #1d1e22;
+    }
+    
+    
+    .cm-scroller::-webkit-scrollbar-thumb {
+      background: #2c2c2c;
     }
 }
 

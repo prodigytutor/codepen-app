@@ -4,9 +4,11 @@ import Image from 'next/image'
 interface EditorHeaderProps {
   codepenIcon: any;
   editIcon: any;
+  title: any;
+  author: any;
 }
 
-const EditorHeader: FunctionComponent<EditorHeaderProps> = ({codepenIcon, editIcon}) => {
+const EditorHeader: FunctionComponent<EditorHeaderProps> = ({codepenIcon, editIcon, title, author}) => {
   return (
     <>
         <div className="editor-header-top">
@@ -20,7 +22,7 @@ const EditorHeader: FunctionComponent<EditorHeaderProps> = ({codepenIcon, editIc
                 />
             </div>
             <div>
-                <input className='editor-header-input' type="text" placeholder='Untitled' ></input>
+                <input className='editor-header-input' type="text" placeholder={title} ></input>
                 <Image
                   className='editor-icon2'
                   src={editIcon}
@@ -29,7 +31,7 @@ const EditorHeader: FunctionComponent<EditorHeaderProps> = ({codepenIcon, editIc
                   alt='editor-icon'
                   />
               <br/>
-              <span className='user-name'>Captain Anonymous</span>
+              <span className='user-name'>{author}</span>
             </div>
         </div>
     </>

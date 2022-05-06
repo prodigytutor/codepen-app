@@ -9,11 +9,13 @@ import EditorHeader from '../components/codepen/EditorHeader';
 import headerIcon from '../public/codepen-icon-small.svg';
 import editIcon from '../public/edit-icon.svg';
 import { useRouter } from 'next/router';
-
+import axios from 'axios';
 
 const Pen2: NextPage = () => {
 
   const router = useRouter()
+  const title = 'CSS-Only Pokémon Quest Starter Icons'
+  const author = 'gabriellewee'
 
   const {
     query: { html2, css2, js2 }
@@ -24,12 +26,29 @@ const Pen2: NextPage = () => {
     css2,
     js2,
   }
-  
 
   const [html, setHtml] = useState(props.html2)
   const [css, setCss] = useState(props.css2)
   const [js, setJs] = useState(props.js2)
   const [srcDoc, setSrcDoc] = useState('')
+
+  axios.all([
+    axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
+    .then(response => {
+        setHtml(response.data)
+    }),
+
+    axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
+    .then(response => {
+        setCss(response.data)
+    
+    }),
+
+    axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
+    .then(response => {
+        setJs(response.data)
+    })
+  ])
   
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -51,13 +70,13 @@ const Pen2: NextPage = () => {
     <EditorHeader 
       codepenIcon={headerIcon}
       editIcon={editIcon}
+      title={title}
+      author={author}
       />
     <Split className='split' direction='vertical' style={{ height: '100vh'}}>
    
       <div className='editors-wrapper'>
 
-      
-        
           <Split className='editors' direction='horizontal'>
             <div className='left-divider-wrapper'>
             <div className='left-divider'/>
