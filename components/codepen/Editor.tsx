@@ -7,7 +7,8 @@ interface EditorProps {
   language: string;
   displayName: string;
   value: any;
-  onChange: any;
+  // onChange: any;
+  onChange: (event: React.ChangeEventHandler<HTMLInputElement>) => void;
   svg: any;
 }
 
@@ -26,6 +27,7 @@ const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, o
   const handleChange : React.ChangeEventHandler<HTMLInputElement> = (event) => {
     onChange(event)
   }
+
 
 
   return (
