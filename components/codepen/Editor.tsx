@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import CodeMirror from '@uiw/react-codemirror'
 import Image from 'next/image'
 
+
 interface EditorProps { 
   language: string;
   displayName: string;
@@ -15,12 +16,12 @@ const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, o
 
   // dynamic imports for refreshing page with Next.js
   const CodeMirrorRefresh = dynamic(() => {
-    import('codemirror/mode/xml/xml')
-    import('codemirror/mode/javascript/javascript')
-    import('codemirror/mode/css/css')
-    import('codemirror/lib/codemirror.css')
-    // import('codemirror/theme/material.css')
-    return import('@uiw/react-codemirror')
+    require('codemirror/mode/xml/xml')
+    require('codemirror/mode/javascript/javascript')
+    require('codemirror/mode/css/css')
+    require('codemirror/lib/codemirror.css')
+    require('codemirror/theme/material.css')
+    return require('@uiw/react-codemirror')
   }, {ssr: false})
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,7 +54,7 @@ const Editor: FunctionComponent<EditorProps> = ({language, displayName, value, o
                         mode: language,
                         // theme: 'material',
                     }}
-                />}
+                />} 
           </div>
       
       
