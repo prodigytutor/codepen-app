@@ -196,7 +196,7 @@ const Section2: FunctionComponent = () => {
             <script>${js6}</script>
         </html>
         `)
-    }, )
+    }, [html2, css2, js2, html3, css3, js3, html4, css4, js4, html5, css5, js5, html6, css6, js6] )
 
   return (
     <>
