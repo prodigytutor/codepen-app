@@ -7,8 +7,8 @@ interface EditorProps {
   language: string;
   displayName: string;
   value: any;
-  // onChange: any;
-  onChange: (event: React.ChangeEventHandler<HTMLInputElement>) => void;
+  onChange: any;
+  // onChange: (event: React.ChangeEventHandler<HTMLInputElement>) => void;
   svg: any;
 }
 
