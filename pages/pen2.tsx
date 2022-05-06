@@ -32,23 +32,28 @@ const Pen2: NextPage = () => {
   const [js, setJs] = useState(props.js2)
   const [srcDoc, setSrcDoc] = useState('')
 
-  axios.all([
-    axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
-    .then(response => {
-        setHtml(response.data)
-    }),
+  const getData = async () => {
+    await axios.all([
+      axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
+      .then(response => {
+          setHtml(response.data)
+      }),
+  
+      axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
+      .then(response => {
+          setCss(response.data)
+      
+      }),
+  
+      axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
+      .then(response => {
+          setJs(response.data)
+      })
+    ])
+  }
+  getData();
 
-    axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
-    .then(response => {
-        setCss(response.data)
-    
-    }),
-
-    axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
-    .then(response => {
-        setJs(response.data)
-    })
-  ])
+  
   
   useEffect(() => {
     const timeout = setTimeout(() => {

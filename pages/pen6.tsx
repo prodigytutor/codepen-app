@@ -32,6 +32,26 @@ const Pen6: NextPage = () => {
   const [js, setJs] = useState(props.js6)
   const [srcDoc, setSrcDoc] = useState('')
 
+  const getData = async () => {
+    await axios.all([
+      axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.html')
+          .then(response => {
+              setHtml(response.data)
+          }),
+  
+          axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.css')
+          .then(response => {
+              setCss(response.data)
+          }),
+  
+          axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.js')
+          .then(response => {
+              setJs(response.data)
+          })
+    ])
+  }
+  getData();
+
   axios.all([
     axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.html')
         .then(response => {

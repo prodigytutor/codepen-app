@@ -32,22 +32,26 @@ const Pen5: NextPage = () => {
   const [js, setJs] = useState(props.js5)
   const [srcDoc, setSrcDoc] = useState('')
 
-axios.all([
-  axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.html')
-      .then(response => {
-        setHtml(response.data)
-    }),
+  const getData = async () => {
+    await axios.all([
+      axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.html')
+          .then(response => {
+            setHtml(response.data)
+        }),
+    
+        axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.css')
+          .then(response => {
+            setCss(response.data)
+        }),
+    
+        axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.js')
+          .then(response => {
+            setJs(response.data)
+        })
+    ])
+  }
+  getData();
 
-    axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.css')
-      .then(response => {
-        setCss(response.data)
-    }),
-
-    axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.js')
-      .then(response => {
-        setJs(response.data)
-    })
-])
 
   useEffect(() => {
     const timeout = setTimeout(() => {

@@ -32,24 +32,26 @@ const Pen4: NextPage = () => {
   const [js, setJs] = useState(props.js4)
   const [srcDoc, setSrcDoc] = useState('')
 
-
-
-  axios.all([
-    axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html')
-        .then(response => {
-            setHtml(response.data)
-        }),
-
-        axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css')
-        .then(response => {
-            setCss(response.data)
-        }),
-
-        axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.js')
-        .then(response => {
-            setJs(response.data)
-        })
-  ])    
+  const getData = async () => {
+    await axios.all([
+      axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html')
+          .then(response => {
+              setHtml(response.data)
+          }),
+  
+          axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css')
+          .then(response => {
+              setCss(response.data)
+          }),
+  
+          axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.js')
+          .then(response => {
+              setJs(response.data)
+          })
+    ])    
+  }
+  getData();
+  
   
   useEffect(() => {
     const timeout = setTimeout(() => {
