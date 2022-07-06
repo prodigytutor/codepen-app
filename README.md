@@ -1,5 +1,5 @@
-### See Demo: [codepen-app.vercel.app](https://codepen-app.vercel.app/)
-#### Start
+### Visit deployed app: [codepen-app.vercel.app](https://codepen-app.vercel.app/)
+#### Run Locally
 
 ```
 npm install

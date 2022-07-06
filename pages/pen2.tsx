@@ -24,19 +24,19 @@ const Pen2: NextPage = () => {
 
   const getData = async () => {
   
-      await axios.all([
-        axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
+     axios.all([
+        await axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
         .then(response => {
             setHtml(response.data)
         }),
     
-        axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
+        await axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
         .then(response => {
             setCss(response.data)
         
         }),
     
-        axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
+        await axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
         .then(response => {
             setJs(response.data)
         })

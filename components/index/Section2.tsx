@@ -38,46 +38,6 @@ const Section2: FunctionComponent = () => {
     //         }
     //     })
     // }
-    const sendProps3 = () => {
-        Router.push({
-            pathname: '/pen3',
-            query: {
-                html3,
-                css3,
-                js3,
-            }
-        })
-    }
-    const sendProps4 = () => {
-        Router.push({
-            pathname: '/pen4',
-            query: {
-                html4,
-                css4,
-                js4,
-            }
-        })
-    }
-    const sendProps5 = () => {
-        Router.push({
-            pathname: '/pen5',
-            query: {
-                html5,
-                css5,
-                js5,
-            }
-        })
-    }
-    const sendProps6 = () => {
-        Router.push({
-            pathname: '/pen6',
-            query: {
-                html6,
-                css6,
-                js6,
-            }
-        })
-    }
 
     const getData = async () => {
          await axios.all([
@@ -305,7 +265,7 @@ const Section2: FunctionComponent = () => {
             </div>
             <div className='card-container'>
                 <Link href='/pen5' passHref >
-                    <a onClick={sendProps5}>
+                    <a>
                         <Section2Card
                         cardSrcDoc={srcDoc5}
                         />
@@ -323,7 +283,7 @@ const Section2: FunctionComponent = () => {
                     </div>
                     <div className='pen-labels'>
                         <Link href='/pen5' passHref>
-                            <a className='pen-title' onClick={sendProps5}>
+                            <a className='pen-title'>
                                 <span className='pen-title'>Card Hover Interactions</span>  
                             </a>
                         </Link>
@@ -335,7 +295,7 @@ const Section2: FunctionComponent = () => {
             </div>
             <div className='card-container'>
                 <Link href='/pen6' passHref >
-                    <a onClick={sendProps6}>
+                    <a>
                         <Section2Card
                         cardSrcDoc={srcDoc6}
                         />
@@ -353,7 +313,7 @@ const Section2: FunctionComponent = () => {
                     </div>
                     <div className='pen-labels'>
                     <Link href='/pen6' passHref>
-                        <a className='pen-title' onClick={sendProps6}>
+                        <a className='pen-title'>
                             <span className='pen-title'>Project Management Dashboard UI</span>  
                         </a>
                     </Link>
