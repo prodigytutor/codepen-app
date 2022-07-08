@@ -31,7 +31,7 @@ const Section1Js: FunctionComponent = () => {
                 </div>
                 <code className='code-section'>
                     <span className='yellow'>
-                        {`var `}
+                        {`let `}
                     </span>
                     <span className='blue'>
                         {`colors `}
@@ -65,13 +65,13 @@ const Section1Js: FunctionComponent = () => {
                 <br/>
                 <code className='code-section'>
                     <span className='yellow'>
-                        {`function `}
+                        {`const `}
                     </span>
                     <span className='blue'>
                         {`animate`}
                     </span>
                     <span className='white'>
-                        {`() {};`}
+                        {` = () => {};`}
                     </span>
                 </code>
             </div>
