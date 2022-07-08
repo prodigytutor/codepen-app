@@ -1,4 +1,4 @@
-### Visit deployed app: [codepen-app.vercel.app](https://codepen-app.vercel.app/){:target="_blank"}
+### Visit deployed app: [codepen-app.vercel.app](https://codepen-app.vercel.app/)
 #### Run Locally
 
 ```
