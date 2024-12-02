@@ -1,7 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
 import axios from 'axios'
 import Section2Card from './Section2Card'
-import Router from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -28,97 +27,99 @@ const Section2: FunctionComponent = () => {
     const [css6, setCss6] = useState('')
     const [js6, setJs6] = useState('')
 
-    // const sendProps2 = () => {
-    //     Router.push({
-    //         pathname: '/pen2',
-    //         query: {
-    //             html2,
-    //             css2,
-    //             js2,
-    //         }
-    //     })
-    // }
-
-    const getData = async () => {
-         await axios.all([
-            axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html')
-            .then(response => {
-                setHtml2(response.data)
-            }),
-    
-            axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css')
-            .then(response => {
-                setCss2(response.data)
-            }),
-    
-            axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js')
-            .then(response => {
-                setJs2(response.data)
-            }),
-            
-            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html')
-            .then(response => {
-                setHtml3(response.data)
-            }),
-    
-            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css')
-            .then(response => {
-                setCss3(response.data)
-            }),
-    
-            axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.js')
-            .then(response => {
-                setJs3(response.data)
-            }),
-            // 4
-            axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html')
-            .then(response => {
-                setHtml4(response.data)
-            }),
-    
-            axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css')
-            .then(response => {
-                setCss4(response.data)
-            }),
-    
-            axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.js')
-            .then(response => {
-                setJs4(response.data)
-            }),
-            // 5
-            axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.html')
-            .then(response => {
-                setHtml5(response.data)
-            }),
-    
-            axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.css')
-            .then(response => {
-                setCss5(response.data)
-            }),
-    
-            axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.js')
-            .then(response => {
-                setJs5(response.data)
-            }),
-            // 6
-            axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.html')
-            .then(response => {
-                setHtml6(response.data)
-            }),
-    
-            axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.css')
-            .then(response => {
-                setCss6(response.data)
-            }),
-    
-            axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.js')
-            .then(response => {
-                setJs6(response.data)
-            })
-        ])
+    const getData1 = async () => {
+        try {
+            await axios.all([
+                axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.html').then(response => {
+                    setHtml2(response.data);
+                }),
+                axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.css').then(response => {
+                    setCss2(response.data);
+                }),
+                axios.get('https://codepen.io/gabriellewee/pen/KKQwydY.js').then(response => {
+                    setJs2(response.data);
+                })
+            ]);
+        } catch (error) {
+            console.log('erro fetching batch 1', error)
+        }
     }
-    getData();
+    const getData2 = async () => {
+        try {
+            await axios.all([
+                axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.html').then(response => {
+                    setHtml3(response.data);
+                }),
+                axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.css').then(response => {
+                    setCss3(response.data);
+                }),
+                axios.get('https://codepen.io/Mamboleoo/pen/rNzYPjq.js').then(response => {
+                    setJs3(response.data);
+                })
+            ]);
+        } catch (error) {
+            console.log('erro fetching batch 2', error)
+        }
+    }
+    const getData3 = async () => {
+        try {
+            await axios.all([
+                axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.html').then(response => {
+                    setHtml4(response.data);
+                }),
+                axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.css').then(response => {
+                    setCss4(response.data);
+                }),
+                axios.get('https://codepen.io/aybukeceylan/pen/poEqdWZ.js').then(response => {
+                    setJs4(response.data);
+                })
+            ]);
+        } catch (error) {
+            console.log('erro fetching batch 3', error)
+        }
+    }
+    const getData4 = async () => {
+        try {
+            await axios.all([
+                axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.html').then(response => {
+                    setHtml5(response.data);
+                }),
+                axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.css').then(response => {
+                    setCss5(response.data);
+                }),
+                axios.get('https://codepen.io/hexagoncircle/pen/XWbWKwL.js').then(response => {
+                    setJs5(response.data);
+                })
+            ]);
+        } catch (error) {
+            console.log('erro fetching batch 4', error)
+        }
+    }
+    const getData5 = async () => {
+        try {
+            await axios.all([
+                axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.html').then(response => {
+                    setHtml6(response.data);
+                }),
+                axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.css').then(response => {
+                    setCss6(response.data);
+                }),
+                axios.get('https://codepen.io/aybukeceylan/pen/OJRNbZp.js').then(response => {
+                    setJs6(response.data);
+                })
+            ]);
+        } catch (error) {
+            console.log('erro fetching batch 5', error)
+        }
+    }
 
+    useEffect(() => {
+        getData1();
+        getData2();
+        getData3();
+        getData4();
+        getData5();
+    }, []);
 
     useEffect(() => {
         setSrcDoc2(`
@@ -127,36 +128,48 @@ const Section2: FunctionComponent = () => {
             <style>${css2}</style>
             <script>${js2}</script>
         </html>
-        `)
+        `);
+    }, [html2, css2, js2]);
+
+    useEffect(() => {
         setSrcDoc3(`
         <html>
             <body>${html3}</body>
             <style>${css3}</style>
             <script>${js3}</script>
         </html>
-        `)
+        `);
+    }, [html3, css3, js3]);
+
+    useEffect(() => {
         setSrcDoc4(`
         <html>
             <body>${html4}</body>
             <style>${css4}</style>
             <script>${js4}</script>
         </html>
-        `)
+        `);
+    }, [html4, css4, js4]);
+
+    useEffect(() => {
         setSrcDoc5(`
         <html>
             <body>${html5}</body>
             <style>${css5}</style>
             <script>${js5}</script>
         </html>
-        `)
+        `);
+    }, [html5, css5, js5]);
+
+    useEffect(() => {
         setSrcDoc6(`
         <html>
             <body>${html6}</body>
             <style>${css6}</style>
             <script>${js6}</script>
         </html>
-        `)
-    }, [html2, css2, js2, html3, css3, js3, html4, css4, js4, html5, css5, js5, html6, css6, js6] )
+        `);
+    }, [html6, css6, js6]);
 
   return (
     <>
