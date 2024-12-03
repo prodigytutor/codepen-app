@@ -35,8 +35,5 @@
     "eslint-config-next": "12.1.4",
     "sass": "^1.49.11",
     "typescript": "4.6.3"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
