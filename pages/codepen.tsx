@@ -6,7 +6,7 @@ import htmlIcon from '../public/html-icon.svg';
 import cssIcon from '../public/css-icon.svg';
 import Split from 'react-split'
 import EditorHeader from '../components/codepen/EditorHeader';
-import headerIcon from '../public/codepen-icon-small.svg';
+import headerIcon from '../public/nexcoder.png';
 import editIcon from '../public/edit-icon.svg'
 import Footer from '../components/codepen/Footer';
 

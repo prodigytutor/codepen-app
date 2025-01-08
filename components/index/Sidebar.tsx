@@ -7,9 +7,9 @@ const Sidebar: FunctionComponent = () => {
     <div className='sidebar'>
       {/* next/image reads public folder simply as '/' - don't need exact file path */}
       <Image
-        width={2500} 
-        height={454} 
-        src={`/codepen-logo.svg`} 
+        width={148} 
+        height={101} 
+        src={`/nexcoder.png`} 
         alt={`side-bar`} 
         className='sidebar-icon'
       />

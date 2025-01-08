@@ -186,7 +186,7 @@ const Section2: FunctionComponent = () => {
             </div>
 
             <div className='card-container'>
-                <Link href='/pen2' passHref >
+                <Link href='/pen2' passHref legacyBehavior={true}>
                     <a>
                         <Section2Card
                         cardSrcDoc={srcDoc2}
@@ -204,7 +204,7 @@ const Section2: FunctionComponent = () => {
                             />
                     </div>
                     <div className='pen-labels'>
-                    <Link href='/pen2' passHref>
+                    <Link href='/pen2' passHref legacyBehavior={true}>
                         <a className='pen-title'>
                             <span className='pen-title'>CSS-Only Pokémon Quest Starter Icons</span>  
                         </a>
@@ -217,7 +217,7 @@ const Section2: FunctionComponent = () => {
             </div>
 
             <div className='card-container'>
-                <Link href='/pen3' passHref >
+                <Link href='/pen3' passHref legacyBehavior={true}>
                     <a>
                         <Section2Card
                         cardSrcDoc={srcDoc3}
@@ -235,7 +235,7 @@ const Section2: FunctionComponent = () => {
                             />
                     </div>
                     <div className='pen-labels'>
-                    <Link href='/pen3' passHref>
+                    <Link href='/pen3' passHref legacyBehavior={true}>
                         <a className='pen-title'>
                             <span className='pen-title'>3D Globe (Pure canvas)</span>  
                         </a>
@@ -247,7 +247,7 @@ const Section2: FunctionComponent = () => {
                 </div>
             </div>
             <div className='card-container'>
-                <Link href='/pen4' passHref >
+                <Link href='/pen4' passHref legacyBehavior={true}>
                     <a>
                         <Section2Card
                         cardSrcDoc={srcDoc4}
@@ -265,7 +265,7 @@ const Section2: FunctionComponent = () => {
                             />
                     </div>
                     <div className='pen-labels'>
-                    <Link href='/pen4' passHref>
+                    <Link href='/pen4' passHref legacyBehavior={true}>
                         <a className='pen-title'>
                             <span className='pen-title'>Job Recruiter Dashboard UI</span>  
                         </a>
@@ -277,7 +277,7 @@ const Section2: FunctionComponent = () => {
                 </div>
             </div>
             <div className='card-container'>
-                <Link href='/pen5' passHref >
+                <Link href='/pen5' passHref legacyBehavior={true}> 
                     <a>
                         <Section2Card
                         cardSrcDoc={srcDoc5}
@@ -295,7 +295,7 @@ const Section2: FunctionComponent = () => {
                             />
                     </div>
                     <div className='pen-labels'>
-                        <Link href='/pen5' passHref>
+                        <Link href='/pen5' passHref legacyBehavior={true}>
                             <a className='pen-title'>
                                 <span className='pen-title'>Card Hover Interactions</span>  
                             </a>
@@ -307,7 +307,7 @@ const Section2: FunctionComponent = () => {
                 </div>
             </div>
             <div className='card-container'>
-                <Link href='/pen6' passHref >
+                <Link href='/pen6' passHref legacyBehavior={true} >
                     <a>
                         <Section2Card
                         cardSrcDoc={srcDoc6}
@@ -325,7 +325,7 @@ const Section2: FunctionComponent = () => {
                             />
                     </div>
                     <div className='pen-labels'>
-                    <Link href='/pen6' passHref>
+                    <Link href='/pen6' passHref legacyBehavior={true}> 
                         <a className='pen-title'>
                             <span className='pen-title'>Project Management Dashboard UI</span>  
                         </a>

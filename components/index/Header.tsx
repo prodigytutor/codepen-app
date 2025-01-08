@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Header: FunctionComponent = () => {
   return (
@@ -7,7 +8,7 @@ const Header: FunctionComponent = () => {
     <div className='header'>
         {/* icons */}
         <div className='mobile-icons'>
-          <a className='mobile-href' href="">
+          <Link className='mobile-href' href="">
             <Image
                 height={45}
                 width={45}
@@ -15,7 +16,7 @@ const Header: FunctionComponent = () => {
                 src={`/codepen-icon-small.svg`}
                 className='header-icons'
                 />
-          </a>
+          </Link>
           <button className='mobile-btn'>
             <Image
                 height={35}
@@ -34,11 +35,9 @@ const Header: FunctionComponent = () => {
             src={`/search.svg`}
             className='header-icons'
             />
-          <input type="text" placeholder='Search CodePen...' />
+          <input type="text" placeholder='Search nexcoder...' />
         </form>
         <div className='flex-grow-1'>
-          <a className='btn sign-up' href="">Sign Up</a>
-          <a className='btn log-in' href="">Sign In</a>
         </div>
     </div>
     </>
